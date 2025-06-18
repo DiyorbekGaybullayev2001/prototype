@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вопросы</title>
+</head>
+
+<body class="bg-[#F2F2F2]">
+
+    <div class="wrapper max-w-7xl mt-0 mx-auto pb-[20px] p-[0_15px]">
+        <header class="flex justify-between mt-[66px]">
+            <div class="flex items-center gap-[25px]">
+                <button class="bg-white-important py-[20px] px-[12px] rounded-[48px] flex justify-center items-center"
+                    onclick="window.history.back(); return false;">
+                    <img src="/image/arrow-l.svg" alt="">
+                </button>
+                <a href="/pages/profile.html">
+                    <img src="/image/avatar.png" alt="" class="max-w-[60px]">
+                </a>
+            </div>
+           <input class="w-[60%] p-[20px] h-[70px] rounded-[40px] border-none max-[1100px]:hidden" placeholder="Поиск"
+                type="text">
+            <div class="flex items-center gap-[25px]">
+                <a href="#"
+                class="hidden bg-white-important rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] max-[1100px]:flex">
+                <img src="/image/search-blue.svg" class="w-[25px]" alt="">
+            </a>
+
+                <a href="/pages/support.html"
+                    class="bg-2B2E3A rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[55px] py-[12px] max-[900px]:hidden">
+                    Поддержка
+                </a>
+                <a href="/pages/support.html"
+                    class="hidden bg-2B2E3A rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] max-[900px]:flex">
+                    <img src="/image/support-ico.svg" class="w-[25px]" alt="">
+                </a>
+            </div>
+        </header>
+        <main class="flex flex-col">
+            <h3 class="flex justify-between items-center font-bold text-[50px] text-black mt-[50px]">Тема 3</h3>
+            <div class="w-full space-y-4 mt-[50px]">
+                <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                    <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                        onclick="togglePanel(this)">
+                        <span class="font-bold text-[25px] leading-[36px]">Вопрос 1</span>
+                        <button class="p-[15px_20px_15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                class="rotate-90 w-6 h-6 transform transition-transform"
+                                alt="Toggle"></button>
+                    </div>
+                    <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do .</div>
+                </div>
+
+                <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                    <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px] "
+                        onclick="togglePanel(this)">
+                        <span class="font-bold text-[25px] leading-[36px]">Вопрос 2</span>
+                        <button class="p-[15px_20px_15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                class="rotate-90 w-6 h-6 transform transition-transform"
+                                alt="Toggle"></button>
+                    </div>
+                    <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                </div>
+
+                <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                    <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                        onclick="togglePanel(this)">
+                        <span class="font-bold text-[25px] leading-[36px]">Вопрос 3</span>
+                        <button class="p-[15px_20px_15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                class="rotate-90 w-6 h-6 transform transition-transform"
+                                alt="Toggle"></button>
+                    </div>
+                    <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                </div>
+            </div>
+
+        </div>
+        </main>
+
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

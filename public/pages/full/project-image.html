@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фото проекта</title>
+</head>
+
+<body class="bg-[#F2F2F2]">
+
+    <div class="wrapper max-w-7xl mt-0 mx-auto pb-[20px] p-[0_15px]">
+
+        <main class="flex flex-col">
+            <h3 class="mt-[110px] text-[#404040] font-bold text-[35px] text-center">Выберите фото для проекта</h3>
+            <div class="w-[60%] mx-auto bg-white h-[20px] rounded-[100px] mt-[40px]">
+                <span class="flex w-[90%] bg-[#EDDA9F] h-[20px] rounded-[100px] "></span>
+            </div>
+            <label class="mt-[20px] mx-auto w-[759px] h-[435px] rounded-[40px] p-[25px] bg-[#E6E6E6] flex items-center justify-center cursor-pointer relative overflow-hidden max-[800px]:w-[650px] max-[700px]:w-[450px] max-[450px]:w-[390px]">
+                <input type="file" class="hidden" accept="image/*" id="imageUpload">
+                <img src="/image/update-img.svg" alt="Загрузить изображение" id="previewImage" class="w-[96px] filter brightness-75 transition-all duration-300">
+            </label>
+            
+
+            <div class="flex items-center justify-center gap-[30px] mt-[50px]">
+                <a href="/pages/full/question.html" class="px-[14px] py-[18px] rounded-[68px] bg-[#EDDA9F]"><img
+                        class="rotate-180" src="/image/arrow-r.svg" alt=""></a>
+                <a class="px-[14px] py-[18px] rounded-[68px] bg-[#EDDA9F]" href="/pages/full/firework.html"><img
+                        src="/image/arrow-r.svg" alt=""></a>
+            </div>
+        </main>
+
+    </div>
+    <script>
+        document.getElementById("imageUpload").addEventListener("change", function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const img = document.getElementById("previewImage");
+                    img.src = e.target.result;
+                    img.classList.remove("w-[96px]", "filter", "brightness-75");
+                    img.classList.add("w-full", "h-full", "object-cover");
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Об проекте</title>
+</head>
+
+<body class="bg-[#F2F2F2]">
+    <div class="wrapper max-w-7xl mt-0 mx-auto pb-5 p-4">
+        <header class="flex justify-between mt-16">
+            <div class="flex items-center gap-6 max-[450px]:gap-2.5 max-[400px]:gap-1.5">
+                <button class="bg-white py-5 px-3 rounded-full flex justify-center items-center"
+                        onclick="window.history.back(); return false;">
+                    <img src="/image/arrow-l.svg" alt="">
+                </button>
+                <a href="/pages/profile.html">
+                    <img src="/image/avatar.png" alt="" class="max-w-[60px]">
+                </a>
+            </div>
+            <div class="flex items-center gap-6 max-[450px]:gap-2.5 max-[400px]:gap-1.5">
+                <a href="/pages/chats.html"
+                   class="bg-2B2E3A rounded-full font-bold text-xl leading-9 text-center text-white px-7 py-3 max-[1000px]:hidden">
+                    Чаты
+                </a>
+                <a href="/pages/chats.html"
+                   class="hidden bg-2B2E3A rounded-[68px] font-bold text-xl leading-9 text-center text-white px-4.5 py-4.5 max-[1000px]:flex">
+                    <img src="/image/message-ico.svg" class="w-6" alt="">
+                </a>
+                <a href="/pages/main.html"
+                   class="bg-2B2E3A rounded-full font-bold text-xl leading-9 text-center text-white px-7 py-3 max-[1000px]:hidden">
+                    Вернуться на главную
+                </a>
+                <a href="/pages/main.html"
+                   class="hidden bg-2B2E3A rounded-[68px] font-bold text-xl leading-9 text-center text-white px-4.5 py-4.5 max-[1000px]:flex">
+                    <img src="/image/home-icoW.svg" class="w-6" alt="">
+                </a>
+                <a href="/pages/subscription.html"
+                   class="bg-2B2E3A rounded-full font-bold text-xl leading-9 text-center text-white px-7 py-3 max-[500px]:text-base max-[500px]:px-5 max-[420px]:text-sm max-[420px]:px-4">
+                    Тариф
+                </a>
+            </div>
+        </header>
+        <main class="flex flex-col">
+            <div class="flex flex-col items-center gap-8 mt-14 mb-20">
+                <div
+                    class="w-full bg-white p-5 pr-10 gap-2.5 flex justify-between items-center rounded-3xl hover:shadow-xl transition-all transition-[.7s] max-[1150px]:flex-col max-[1150px]:items-start max-[600px]:p-3">
+                    <div
+                        class="w-full max-[1150px]:flex max-[1150px]:items-center max-[1150px]:justify-between max-[1050px]:flex-col max-[1050px]:items-start">
+                        <h3 class="font-bold text-3xl text-black mb-6">Наименование проекта</h3>
+                        <p class="font-normal text-xl text-black op-[50%] leading-8 max-w-[511px]">Lorem ipsum dolor sit
+                            amet, consectetur adipiscing elit, sed do </p>
+                    </div>
+                    <div class="relative group w-fit">
+                        <img id="previewImage"
+                             class="w-full max-w-[610px] max-h-[240px] rounded-xl max-[750px]:max-w-[410px] max-[550px]:max-w-[350px] max-h-[350px]"
+                             src="/image/project-info.svg" alt="">
+                        <label for="imageUpload"
+                               class="absolute inset-0 bg-[#0000007c] flex items-center justify-center rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                            <img src="/image/update-img.svg" alt="Upload">
+                        </label>
+                        <input type="file" id="imageUpload" class="hidden" accept="image/*">
+                    </div>
+                </div>
+                <div class="w-full flex justify-between items-center rounded-3xl gap-6 max-[1000px]:flex-col">
+                    <div
+                        class="w-[50%] bg-white p-10 flex items-center rounded-3xl hover:shadow-xl transition-all transition-[.7s] relative min-h-[280px] max-[1000px]:w-full">
+                        <div>
+                            <h3 class="font-bold text-3xl text-black mb-6 max-[600px]:text-xl">Инфо об
+                                исполнителе</h3>
+                            <p
+                                class="font-normal text-xl text-black op-[50%] leading-8 max-w-[511px] max-[600px]:text-base">
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do </p>
+                            <div class="bg-[#2B2E3A] p-3 absolute right-6 top-6 rounded-xl"><img class=" rounded-md"
+                                                                                                 src="/image/profile-mini.svg" alt=""></div>
+                        </div>
+                    </div>
+                    <div
+                        class="w-[50%] bg-white p-10 flex items-center rounded-3xl hover:shadow-xl transition-all transition-[.7s] relative min-h-[280px] max-[1000px]:w-full">
+                        <div>
+                            <h3 class="font-bold text-3xl text-black mb-6 max-[600px]:text-xl">Инфо об
+                                заказчике</h3>
+                            <p
+                                class="font-normal text-xl text-black op-[50%] leading-8 max-w-[511px] max-[600px]:text-base">
+                                Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do </p>
+                            <div class="bg-[#2B2E3A] p-3 absolute right-6 top-6 rounded-xl"><img
+                                class=" px-1.5 py-1 bg-white rounded-md" src="/image/profile-mini2.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="mb-5 font-bold text-4xl">Вид проекта</h3>
+            <div class="grid grid-cols-2 gap-6 w-full justify-center mb-8 max-[800px]:grid-cols-1">
+                <div
+                    class="bg-white p-10 w-full min-h-[280px] rounded-3xl relative hover:shadow-xl transition-all transition-[.7s]">
+                    <h3 class="font-bold text-3xl text-black mb-6 max-[600px]:text-xl">Дата стара</h3>
+                    <p class="font-normal text-xl text-black op-[50%] leading-8 max-w-[511px]">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit, sed do </p>
+                    <div class="bg-[#2B2E3A] p-3 absolute right-6 top-6 rounded-xl"><img class=" rounded-md"
+                                                                                         src="/image/calendar.svg" alt=""></div>
+                </div>
+                <div
+                    class="bg-white p-10 w-full min-h-[280px] rounded-3xl relative hover:shadow-xl transition-all transition-[.7s]">
+                    <h3 class="font-bold text-3xl text-black mb-6 max-[600px]:text-xl">Статус</h3>
+                    <p class="font-normal text-xl text-black op-[50%] leading-8 max-w-[511px]">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit, sed do </p>
+                    <div class="bg-[#2B2E3A] p-3 absolute right-6 top-6 rounded-xl"><img class=" rounded-md"
+                                                                                         src="/image/status.svg" alt=""></div>
+                </div>
+                <div
+                    class="bg-white p-10 w-full min-h-[280px] rounded-3xl relative hover:shadow-xl transition-all transition-[.7s]">
+                    <h3 class="font-bold text-3xl text-black mb-6 max-[600px]:text-xl">Текущий этап</h3>
+                    <p class="font-normal text-xl text-black op-[50%] leading-8 max-w-[511px]">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit, sed do </p>
+                    <div class="bg-[#2B2E3A] p-3 absolute right-6 top-6 rounded-xl"><img class=" rounded-md"
+                                                                                         src="/image/now.svg" alt=""></div>
+                </div>
+                <div
+                    class="bg-white p-10 w-full min-h-[280px] rounded-3xl relative hover:shadow-xl transition-all transition-[.7s]">
+                    <h3
+                        class="font-bold text-3xl text-black mb-6 max-w-[370px] leading-[1.36] max-[600px]:text-xl">
+                        Дата сдачи
+                        очередного этапа</h3>
+                    <p class="font-normal text-xl text-black op-[50%] leading-8 max-w-[511px]">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit, sed do </p>
+                    <div class="bg-[#2B2E3A] p-3 absolute right-6 top-6 rounded-xl"><img class=" rounded-md"
+                                                                                         src="/image/date.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="p-5 pr-2.5 pl-16 bg-white relative rounded-3xl">
+                <h3 class="font-bold text-3xl text-black mb-6">Финансы</h3>
+                <h6 class="font-bold text-xl mb-3 text-black op-[50%] leading-8 max-w-[511px]">1.000 ₽
+                </h6>
+                <p class="font-normal text-xl mb-5 text-black op-[50%] leading-8 max-w-[511px]">Получено
+                </p>
+                <div class="flex items-center gap-5">
+                    <div class="w-full bg-[#F3F3F3] h-7 rounded-full relative">
+                        <div class="absolute w-[5%] h-full bg-[#00950A] rounded-full"></div>
+                    </div>
+                    <h4 class="font-bold text-xl whitespace-nowrap">200.000 ₽</h4>
+                </div>
+                <div class="bg-[#2B2E3A] p-3 absolute right-6 top-6 rounded-xl"><img class=" rounded-md"
+                                                                                     src="/image/ruble.svg" alt=""></div>
+            </div>
+            <ul
+                class="text-sm font-bold text-white grid w-full grid-cols-2 gap-6 mt-8 mb-8 max-[700px]:text-xs max-[550px]:text-[10px]">
+                <li
+                    class="menu-item py-3 pl-6 pr-3 bg-[#2B2E3A] w-full rounded-xl flex justify-between items-center cursor-pointer">
+                    Изменить проект<img class="w-15 rounded-full max-[700px]:w-10 max-[500px]:w-7.5"
+                                        src="/image/pencilW.svg" alt="">
+                </li>
+                <a href="/pages/info-projects.html"
+                   class="menu-item py-3 pl-6 pr-3 bg-[#2B2E3A] w-full rounded-xl flex justify-between items-center cursor-pointer">
+                    Вся информация по проекту<img class="w-15 rounded-full max-[700px]:w-10 max-[500px]:w-7.5"
+                                                  src="/image/infoW.svg" alt=""></a>
+                <li
+                    class="menu-item py-3 pl-6 pr-3 bg-[#2B2E3A] w-full rounded-xl flex justify-between items-center cursor-pointer">
+                    Поставить на паузу<img class="w-15 rounded-full max-[700px]:w-10 max-[500px]:w-7.5"
+                                           src="/image/pauseW.svg" alt=""></li>
+                <li
+                    class="menu-item py-3 pl-6 pr-3 bg-[#2B2E3A] w-full rounded-xl flex justify-between items-center cursor-pointer"
+                    id="delete">
+                    Результат сдан<img class="w-15 rounded-full max-[700px]:w-10 max-[500px]:w-7.5"
+                                       src="/image/yes.svg" alt=""></li>
+                <li
+                    class="menu-item py-3 pl-6 pr-3 bg-[#2B2E3A] w-full rounded-xl flex justify-between items-center cursor-pointer">
+                    Возобновить проект<img class="w-15 rounded-full max-[700px]:w-10 max-[500px]:w-7.5"
+                                           src="/image/reloadW.svg" alt=""></li>
+                <li
+                    class="menu-item py-3 pl-6 pr-3 bg-[#2B2E3A] w-full rounded-xl flex justify-between items-center cursor-pointer"
+                    id="select">
+                    <p class="max-w-[215px]">Заказчик оплатил проект/часть проекта</p><img
+                    class="w-15 rounded-full max-[700px]:w-10 max-[500px]:w-7.5" src="/image/rublesW.svg" alt="">
+                </li>
+                <li
+                    class="menu-item py-3 pl-6 pr-3 bg-[#2B2E3A] w-full rounded-xl flex justify-between items-center cursor-pointer">
+                    Закрыть проект<img class="w-15 rounded-full max-[700px]:w-10 max-[500px]:w-7.5"
+                                       src="/image/clear.svg" alt="">
+                </li>
+                <li
+                    class="menu-item py-3 pl-6 pr-3 bg-[#2B2E3A] w-full rounded-xl flex justify-between items-center cursor-pointer"
+                    id="all-chats">
+                    Спор с заказчиком<img class="w-15 rounded-full max-[700px]:w-10 max-[500px]:w-7.5"
+                                          src="/image/weightW.svg" alt=""></li>
+            </ul>
+            <div
+                class="p-5 pl-20 bg-white flex items-center w-full gap-5 max-h-[280px] rounded-3xl mb-8 max-[900px]:flex-col max-[900px]:max-h-full max-[700px]:p-3">
+                <div class="w-[50%] max-[900px]:w-full">
+                    <h3 class="font-bold text-3xl text-black mb-6">Выполнено</h3>
+                    <p class="font-normal text-xl text-black op-[50%] leading-8 max-w-[511px]">Lorem ipsum dolor sit
+                        amet, consectetur adipiscing elit, sed do </p>
+                </div>
+                <div class="w-[50%] bg-[#F3F3F3] h-[240px] relative rounded-xl max-[900px]:w-full">
+                    <div class="absolute w-[25%] h-full bg-[#00950A] rounded-l-xl left-0"></div>
+                    <div
+                        class="px-5 py-3 bg-white rounded-md absolute right-5 bottom-5 font-bold text-sm">
+                        25 / 100%</div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация аккаунта</title>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="wrapper">
+        <main class="flex flex-col items-center justify-center bg-gray-200/70 min-h-screen w-full">
+            <div
+                class="registration-modal bg-white rounded-3xl p-10 w-[660px] shadow-lg max-[500px]:w-[400px] max-[500px]:p-7">
+                <h2 class="text-3xl font-bold mb-4 max-[500px]:text-xl md:leading-10">Попробуйте бесплатно!</h2>
+                <h6 class="reg text-lg mb-6">Уже зарегистрированы? <a href="./login.html" class="underline">Войти</a>
+                </h6>
+                <form action="" class="inputs flex flex-col gap-4">
+                    <input type="email" placeholder="Ваш логин"
+                           class="w-full rounded-xl border border-gray-500 p-3.5 px-5 text-base font-light">
+                    <input type="email" placeholder="Ваш Email"
+                           class="w-full rounded-xl border border-gray-500 p-3.5 px-5 text-base font-light">
+                    <input type="password" placeholder="Пароль"
+                           class="w-full rounded-xl border border-gray-500 p-3.5 px-5 text-base font-light">
+                    <input type="password" placeholder="Повторите пароль"
+                           class="w-full rounded-xl border border-gray-500 p-3.5 px-5 text-base font-light">
+                </form>
+                <div class="remember rules flex items-start gap-2 mt-4 mb-6 max-[500px]:text-sm">
+                    <input type="checkbox" id="rememberCheckbox" class="w-5 h-5 cursor-pointer ">
+                    <span class="text-lg">Я принимаю <a href="#" class="underline">Правила
+                            пользования сервисом</a> и <a href="#" class="underline">Политику
+                            конфиденциальности.</a></span>
+                </div>
+                <a href="./confirmation.html?from=registration"
+                   class="border-btn-2 log-in__btn flex items-center justify-center bg-yellow-300 rounded-full py-5 w-4/5 text-center font-bold text-xl leading-10 border-2 border-transparent max-[500px]:py-3">Подтвердить</a>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

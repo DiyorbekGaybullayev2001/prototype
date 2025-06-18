@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="../../image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фото проекта</title>
+</head>
+
+<body class="bg-[#F2F2F2]">
+
+    <div class="wrapper max-w-7xl mt-0 mx-auto pb-[20px] p-[0_15px]">
+        <div id="firework-container"></div>
+        <main class="flex flex-col mt-[350px]">
+            <h3 class=" text-[#404040] font-bold text-[35px] text-center">Проект создан</h3>
+            <a href="/pages/about-projects.html"
+                class="border-btn-2 log-in__btn flex items-center justify-center bg-yellow-300 rounded-[48px] py-5 px-[68px] w-fit text-center font-bold text-[25px] mx-auto mt-[50px] leading-[34.1px] border-2 border-transparent">К
+                проекту</a>
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
+    <script>
+        function launchConfetti() {
+            const duration = 3 * 1000; // 3 секунды
+            const end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 5,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 },
+                });
+                confetti({
+                    particleCount: 5,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 },
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            })();
+        }
+
+        document.addEventListener("DOMContentLoaded", launchConfetti);
+    </script>
+
+
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>О приложении</title>
+</head>
+
+<body class="bg-[#2B2E3A]">
+    <div class="wrapper max-w-7xl mt-0 mx-auto pb-5 h-screen flex flex-col p-4 md:p-0">
+        <header class="flex justify-between mt-16">
+            <button class="back bg-white py-3 px-3 rounded-full flex justify-center items-center"
+                    onclick="window.history.back(); return false;">
+                <img src="/image/arrow-l.svg" alt="">
+            </button>
+            <div class="flex items-center gap-6">
+                <a href="./login.html"
+                   class="hidden bg-white rounded-full font-bold text-xl leading-9 text-center text-black px-8 py-3 max-[1000px]:hidden">
+                    Войти
+                </a>
+                <a href="/index.html"
+                   class="hidden bg-white rounded-full font-bold text-xl leading-9 text-center text-black px-8 py-3 max-[600px]:text-base max-[600px]:py-3 max-[600px]:px-5 max-[450px]:text-sm max-[450px]:py-2.5 max-[450px]:px-4">
+                    Получить доступ
+                </a>
+                <a href="./registration.html"
+                   class="hidden bg-white rounded-full font-bold text-xl leading-9 text-center text-black px-8 py-3 max-[1000px]:hidden">
+                    Зарегистрироваться
+                </a>
+                <a href="./subscription.html"
+                   class="bg-white rounded-full font-bold text-xl leading-9 text-center text-black px-8 py-3 max-[600px]:text-base max-[600px]:py-3 max-[600px]:px-5 max-[450px]:text-sm max-[450px]:py-2.5 max-[450px]:px-4">
+                    Выбрать тариф
+                </a>
+            </div>
+        </header>
+        <main class="main flex flex-col justify-center h-full">
+            <div class="flex justify-between items-center mb-5">
+                <h2
+                    class="font-bold text-4xl leading-[1.64] tracking-tight text-white max-[650px]:text-3xl max-[500px]:text-2xl">
+                    О приложении</h2>
+                <img class="max-[500px]:w-12 max-[500px]:h-12" src="/image/logo_mini.svg" alt="" />
+            </div>
+            <div class="flex justify-between bg-white p-5 gap-5 pl-12 rounded-3xl max-[1000px]:flex-col">
+                <div
+                    class="mt-7 font-normal text-base leading-8 tracking-wide text-[#404040] max-w-[480px] max-[1000px]:max-w-full">
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </h4>
+                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </h4>
+                </div>
+                <img class="max-[1000px]:hidden" src="/image/about.png" alt="" />
+                <img class="hidden max-[1000px]:flex" src="/image/about-phone.png" alt="" />
+            </div>
+        </main>
+    </div>
+    <script src="/main.js"></script>
+</body>
+
+</html>

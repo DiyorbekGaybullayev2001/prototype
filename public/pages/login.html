@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700;1000&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css">
+    <title>Войти</title>
+</head>
+
+<body class="font-[Nunito_Sans]">
+    <div class="wrapper">
+        <div
+            class="susseful fixed w-screen h-screen bg-gray-200 flex flex-col items-center justify-center gap-1 opacity-0 invisible transition-opacity duration-1000 ease-in-out">
+            <img src="/image/chek.svg" alt="">
+            <h6 class="max-w-[440px] font-bold text-[35px] leading-[54.56px] text-center">Вы успешно зарегистрированы!
+            </h6>
+        </div>
+        <main class="login__page flex flex-col items-center justify-center bg-gray-200/70 min-h-screen w-full">
+            <div class="login__modal bg-white rounded-[30px] p-[40px] px-[65px] pb-[50px] 
+            w-[470px] max-[500px]:w-[400px] max-[500px]:px-[30px]">
+
+                <h2 class="font-bold text-[36px] leading-[49.1px] text-black mb-[21px]
+                max-[500px]:text-[24px] md:leading-[38px]">
+                    Рады видеть Вас!
+                </h2>
+
+                <h6 class="reg flex items-center font-normal text-[16px] leading-[27.28px] gap-1 mb-[21px] 
+                max-[500px]:text-[14px] md:leading-[20px]">
+                    Нет аккаунта?
+                    <a href="./registration.html"
+                        class="font-bold text-[16px] leading-[21.82px] text-white bg-gray-800 rounded-[28px] px-5 py-2 max-[500px]:text-[12px]">Зарегистрироваться</a>
+                </h6>
+                <form action="" class="inputs flex flex-col w-full gap-[11px] mb-[25px]">
+                    <input type="email" placeholder="Введите email"
+                        class="w-full rounded-[15px] border border-gray-500 p-[12px] px-[20px] text-[16px] font-light">
+                    <input type="password" placeholder="Введите пароль"
+                        class="w-full rounded-[15px] border border-gray-500 p-[12px] px-[20px] text-[16px] font-light">
+                </form>
+                <h6 class="forgotpass flex items-center gap-1 font-normal text-[16px] leading-[27.28px] mb-[25px]">
+                    Забыли пароль?
+                    <a href="./forgetpassword.html" class="underline">Восстановить</a>
+                </h6>
+                <div class="remember flex items-center gap-4 font-normal text-[16px] leading-[27.28px] mb-[25px]">
+                    <input type="checkbox" id="rememberCheckbox"
+                        class="w-[25px] h-[25px] rounded-md border border-gray-400">
+                    <label for="rememberCheckbox">Запомнить меня</label>
+                </div>
+                <a href="./firstvisit.html"
+                    class="border-btn-2 log-in__btn flex items-center justify-center bg-yellow-300 rounded-[48px] py-5 w-full text-center font-bold text-[25px] leading-[34.1px] border-2 border-transparent max-[500px]:py-3 max-[500px]:py-3">Войти</a>
+            </div>
+        </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

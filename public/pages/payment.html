@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Способы оплаты</title>
+</head>
+
+<body>
+    <div class="wrapper bg-[#2B2E3A]">
+        <div class="container max-w-7xl mt-0 mx-auto p-[0_15px]">
+            <header class="flex justify-between mt-[66px]">
+                <div class="header__left flex items-center gap-[25px]">
+                    <button
+                        class="back bg-white-important py-[20px] px-[12px] rounded-[48px] flex justify-center align-center"
+                        onclick="window.history.back(); return false;">
+                        <img src="/image/arrow-l.svg" alt="">
+                    </button>
+                    <a href="./profile.html">
+                        <img src="/image/avatar.png" alt="" class="max-w-[60px]">
+                    </a>
+                </div>
+                <div class="flex items-center gap-[25px]">
+                    <a href="/pages/main.html"
+                        class="bg-white-important rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-black px-[65px] py-[12px] max-[600px]:hidden">
+                        Вернуться на главную
+                    </a>
+                    <a href="/pages/main.html"
+                        class="hidden bg-white-important rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-black px-[20px] py-[20px] max-[600px]:flex">
+                        <img src="/image/home-ico.svg" alt="">
+                    </a>
+                </div>
+            </header>
+            <main class="block-cards">
+                <h2 class="mt-[60px] font-bold text-white text-[50px]">Выберите способ оплаты</h2>
+                <p class=" font-light text-white text-[16px] opacity-90">Вы покупаете Тариф на 1 месяц за 490 рублей.
+                </p>
+
+                <div class="flex items-center flex-wrap w-full gap-[25px] mt-[60px]">
+                    <a href="/pages/payment-access.html"
+                        class="hidden w-full flex items-center justify-center py-[20px]  bg-white rounded-[30px] gap-[80px] max-h-[90px] min-h-[90px] max-[550px]:flex">
+                        <img src="/image/sbp.svg" alt="">
+                    </a>
+                    <a href="/pages/payment-access.html"
+                        class="w-[350px] flex items-center justify-between py-[20px] px-[10px]  bg-white rounded-[30px] max-h-[90px] min-h-[90px] max-[550px]:w-[47%] max-[450px]:min-h-[80px] max-[450px]:w-[46.5%] max-[380px]:w-[46%]">
+                        <img src="/image/visa.svg" alt="">
+                        <img src="/image/mastercard.svg" alt="">
+                    </a>
+                    <a href="#"
+                        class="w-[350px] flex items-center justify-center py-[20px]  bg-white rounded-[30px] gap-[80px] max-h-[90px] min-h-[90px] max-[550px]:w-[47%] max-[550px]:hidden">
+                        <img src="/image/sbp.svg" alt="">
+                    </a>
+                    <a href="#"
+                        class="w-[350px] flex items-center justify-center py-[20px]  bg-white rounded-[30px] gap-[80px] max-h-[90px] min-h-[90px] max-[550px]:w-[47%] max-[450px]:min-h-[80px] max-[450px]:w-[46.5%] max-[380px]:w-[46%]">
+                        <img src="/image/mir.png" alt="">
+                    </a>
+                </div>
+                <div class="w-full h-px bg-white opacity-50 my-[25px] "></div>
+                <div class="flex items-center gap-[25px] flex-wrap">
+                    <a href="#"
+                        class="w-[350px] flex items-center justify-center py-[20px]  bg-[#4EA35B] rounded-[30px] gap-[80px] max-h-[90px] min-h-[90px] max-[550px]:w-[47%] max-[450px]:min-h-[80px] max-[450px]:w-[46.5%] max-[380px]:w-[46%]">
+                        <img src="/image/sber.svg" alt="">
+                    </a>
+                    <a href="#"
+                        class="w-[350px] flex items-center justify-center py-[20px]  bg-[#FFDD2D] rounded-[30px] gap-[80px] max-h-[90px] min-h-[90px] max-[550px]:w-[47%] max-[450px]:min-h-[80px] max-[450px]:w-[46.5%] max-[380px]:w-[46%]">
+                        <img src="/image/t-bank.svg" alt="">
+                    </a>
+                    <a href="#"
+                        class="w-[350px] flex items-center justify-center py-[20px]  bg-[#EF3124] rounded-[30px] gap-[80px] max-h-[90px] min-h-[90px] max-[550px]:w-[47%] max-[450px]:min-h-[80px] max-[450px]:w-[46.5%] max-[380px]:w-[46%]">
+                        <img src="/image/alfa.svg" alt="">
+                    </a>
+                    <a href="#"
+                        class="w-[350px] flex items-center justify-center py-[20px]  bg-white rounded-[30px] gap-[80px] max-h-[90px] min-h-[90px] max-[550px]:w-[47%] max-[450px]:min-h-[80px] max-[450px]:w-[46.5%] max-[380px]:w-[46%]">
+                        <img src="/image/umoney.svg" alt="">
+                    </a>
+                </div>
+            </main>
+            <footer
+                class="footer flex items-center justify-between text-white font-light text-[16px] leading-[27.28px] mt-[50px] mb-[30px] max-[650px]:flex-col max-[650px]:items-start">
+                <div class="f-left flex flex-col items-start">
+                    Все права защищены. <br> © 2025 ИП Распутин Иван Николаевич
+                </div>
+                <div class="f-right flex flex-col items-end max-[650px]:items-start">
+                    <a href="/pages/agreement.html">Оферта</a>
+                    <a href="/pages/agreement.html">Политика конфиденциальности</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../../src/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Чаты</title>
+</head>
+
+<body class="bg-[#F2F2F2]">
+    <div id="contextMenu" class="hidden absolute shadow-lg rounded-[30px] p-[25px] w-[500px] bg-[#2B2E3A]">
+        <ul class="text-[16px] font-bold text-black flex flex-col gap-[25px]">
+            <li id="archive-chat"
+                class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
+                Архивировать <img class="w-[60px] rounded-[60px]" src="/image/archiveW.svg" alt=""></li>
+            <li
+                class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
+                Закрепить <img class="w-[60px] rounded-[60px]" src="/image/pinW.svg" alt=""></li>
+            <li id="toggle-notifications"
+                class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
+                Выключить уведомления <img class="w-[60px] rounded-[60px]" src="/image/ringon.png" alt=""></li>
+            <li
+                class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
+                Пометить как непрочитанное <img class="w-[60px] rounded-[60px]" src="/image/messageW.svg" alt=""></li>
+            <li
+                class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
+                Очистить историю <img class="w-[60px] rounded-[60px]" src="/image/clearW.svg" alt=""></li>
+            <li class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer"
+                id="delete">
+                Удалить <img class="w-[60px] rounded-[60px]" src="/image/trashW.svg" alt=""></li>
+            <li class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer"
+                id="select">
+                Выбрать <img class="w-[60px] rounded-[60px]" src="/image/yesW.svg" alt=""></li>
+            <li class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer"
+                id="all-chats">
+                Выделить все чаты <img class="w-[60px] rounded-[60px]" src="/image/yesW.svg" alt=""></li>
+            <li class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer"
+                id="cancel">
+                Отменить <img class="w-[60px] rounded-[60px]" src="/image/clearW.svg" alt=""></li>
+
+        </ul>
+    </div>
+    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
+
+    <div id="contextMenu-2"
+         class="hidden absolute shadow-lg rounded-[30px] p-[25px] w-[975px] bg-[#2B2E3A] z-1001 max-[1100px]:w-[875px] max-[950px]:w-[675px] max-[750px]:w-[550px] max-[600px]:w-[400px] max-[600px]:p-[15px]">
+        <ul
+            class="text-[16px] font-bold text-black flex flex-col flex-wrap w-full max-h-[465px] gap-[25px] max-[900px]:max-h-full  max-[900px]:grid max-[900px]:grid-cols-2 max-[600px]:text-[14px] max-[500px]:gap-[15px]">
+            <li
+                class="menu-item max-w-[444px] py-[13px] pl-[25px] pr-[13px] bg-white w-[48%] rounded-[20px] flex justify-between items-center cursor-pointer max-[900px]:flex-col max-[900px]:items-start max-[900px]:w-[100%] ">
+                Изменить проект<img
+                class="w-[60px] rounded-[60px] max-[900px]:mt-[15px] max-[900px]:ml-auto max-[750px]:w-[45px]"
+                src="/image/pencil.svg" alt=""></li>
+            <li
+                class="menu-item max-w-[444px] py-[13px] pl-[25px] pr-[13px] bg-white w-[48%] rounded-[20px] flex justify-between items-center cursor-pointer max-[900px]:flex-col max-[900px]:items-start max-[900px]:w-[100%]">
+                Поставить на паузу<img
+                class="w-[60px] rounded-[60px] max-[900px]:mt-[15px] max-[900px]:ml-auto max-[750px]:w-[45px]"
+                src="/image/pause.svg" alt=""></li>
+            <li
+                class="menu-item max-w-[444px] py-[13px] pl-[25px] pr-[13px] bg-white w-[48%] rounded-[20px] flex justify-between items-center cursor-pointer max-[900px]:flex-col max-[900px]:items-start max-[900px]:w-[100%]">
+                Возобновить проект<img
+                class="w-[60px] rounded-[60px] max-[900px]:mt-[15px] max-[900px]:ml-auto max-[750px]:w-[45px]"
+                src="/image/reload.svg" alt=""></li>
+            <li
+                class="menu-item max-w-[444px] py-[13px] pl-[25px] pr-[13px] bg-white w-[48%] rounded-[20px] flex justify-between items-center cursor-pointer max-[900px]:flex-col max-[900px]:items-start max-[900px]:w-[100%]">
+                Закрыть проект<img
+                class="w-[60px] rounded-[60px] max-[900px]:mt-[15px] max-[900px]:ml-auto max-[750px]:w-[45px]"
+                src="/image/clearW.svg" alt=""></li>
+            <a href="/pages/info-projects.html"
+               class="menu-item max-w-[444px] py-[13px] pl-[25px] pr-[13px] bg-white w-[48%] rounded-[20px] flex justify-between items-center cursor-pointer max-[900px]:flex-col max-[900px]:items-start max-[900px]:w-[100%]">
+                Вся информация по проекту<img
+                class="w-[60px] rounded-[60px] max-[900px]:mt-[15px] max-[900px]:ml-auto max-[750px]:w-[45px]"
+                src="/image/info.svg" alt=""></a>
+            <li
+                class="menu-item max-w-[444px] py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer max-[900px]:flex-col max-[900px]:items-start max-[900px]:w-[100%]">
+                Результат сдан<img
+                class="w-[60px] rounded-[60px] max-[900px]:mt-[15px] max-[900px]:ml-auto max-[750px]:w-[45px]"
+                src="/image/yesW.svg" alt=""></li>
+            <li
+                class="menu-item max-w-[444px] py-[13px] pl-[25px] pr-[13px] bg-white w-[48%] rounded-[20px] flex justify-between items-center cursor-pointer max-[900px]:flex-col max-[900px]:items-start max-[900px]:w-[100%]">
+                <p class="max-w-[215px]">Заказчик оплатил проект/часть проекта</p><img
+                class="w-[60px] rounded-[60px] max-[900px]:mt-[15px] max-[900px]:ml-auto max-[750px]:w-[45px]"
+                src="/image/rubles.svg" alt="">
+            </li>
+            <li
+                class="menu-item max-w-[444px] py-[13px] pl-[25px] pr-[13px] bg-white w-[48%] rounded-[20px] flex justify-between items-center cursor-pointer max-[900px]:flex-col max-[900px]:items-start max-[900px]:w-[100%]">
+                Спор с заказчиком<img
+                class="w-[60px] rounded-[60px] max-[900px]:mt-[15px] max-[900px]:ml-auto max-[750px]:w-[45px]"
+                src="/image/weight.svg" alt=""></li>
+
+
+        </ul>
+    </div>
+    <div id="overlay-2" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
+
+    <div
+        class=" max-w-7xl mt-0 mx-auto pb-[20px] mt-0 p-[0_15px] h-[100vh] flex flex-col max-[1000px]:overflow-y-hidden max-[1000px]:h-[90vh]">
+        <header class="flex justify-between mt-[66px] max-[700px]:mt-[36px]">
+            <div class="flex items-center gap-[25px]">
+                <button id="defaultBackBtn"
+                        class="bg-white-important py-[20px] px-[12px] rounded-[48px] flex justify-center items-center"
+                        onclick="window.history.back(); return false;">
+                    <img src="/image/arrow-l.svg" alt="">
+                </button>
+                <button id="backbutton"
+                        class=" bg-white-important py-[20px] px-[12px] rounded-[48px] flex justify-center items-center hidden"
+                        onclick="showChatList();">
+                    <img src="/image/arrow-l.svg" alt="">
+                </button>
+                <a href="/pages/profile.html">
+                    <img src="/image/avatar.png" alt="" class="max-w-[60px]">
+                </a>
+            </div>
+            <div class="flex items-center gap-[25px]">
+                <a href="/pages/main.html"
+                   class="bg-2B2E3A rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[55px] py-[12px] max-[900px]:hidden">
+                    Вернуться на главную
+                </a>
+                <a href="/pages/main.html"
+                   class="hidden bg-2B2E3A rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] max-[900px]:flex">
+                    <img src="/image/home-icoW.svg" class="w-[25px]" alt="">
+                </a>
+                <button id="showContextBtn"
+                        class="hidden rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white max-w-[58px] max-h-[58px]">
+                    <img src="/image/pointer.svg" alt="" id="btnImage">
+                </button>
+            </div>
+        </header>
+        <main class="flex flex-col w-full flex-1 overflow-hidden">
+            <div class="flex flex-1 gap-[30px] mt-[27px] min-h-0 max-[1000px]:gap-0">
+                <div id="archive-inner"
+                     class="archive-inner hidden bg-[#E4E4E4] p-[20px] w-[40%] rounded-[35px] h-full">
+                    <nav class="flex items-center gap-[13px] mb-[25px]">
+                        <li id="archive-btn"
+                            class="cursor-pointer flex items-center justify-center list-none bg-white min-w-[40px] h-[40px] font-light text-[16px] leading-[30px] rounded-[30px] text-black">
+                            <img class="w-[20px]" src="/image/arrow-l.svg" alt="">
+                            </button>
+                        </li>
+                        <li
+                            class="cursor-pointer flex items-center list-none bg-white p-[5px_27px_5px_27px] font-light text-[16px] leading-[30px] rounded-[30px] text-black max-[550px]:hidden">
+                            Все</li>
+                        <li
+                            class="cursor-pointer flex items-center list-none bg-white p-[5px_27px_5px_27px] font-light text-[16px] leading-[30px] rounded-[30px] text-black max-[550px]:hidden">
+                            Непрочитанные</li>
+                        <li
+                            class="cursor-pointer flex items-center list-none bg-white p-[5px_27px_5px_27px] font-light text-[16px] leading-[30px] rounded-[30px] text-black max-[550px]:hidden">
+                            Избранное</li>
+                    </nav>
+
+
+                    <div id="archived-chats"
+                         class="chats  flex flex-col flex-1 min-h-0 gap-[10px] overflow-y-auto mt-[20px]">
+
+                    </div>
+                </div>
+                <div id="left"
+                     class="flex flex-col w-[40%] bg-[#FDF7EF] p-[20px] rounded-[35px] overflow-hidden min-h-0   max-[550px]:p-[15px_10px] ">
+                    <div id="search-container" class="flex items-center border border-[#CECECE] p-[10px] rounded-[100px] w-full">
+                        <img src="/image/loop.svg" alt="Поиск" class="mr-2">
+                        <input id="search-input" type="text" placeholder="Поиск" class="w-full outline-none bg-transparent">
+                    </div>
+
+                    <nav id="nav-area" class="flex items-center gap-[20px] mt-[25px] mb-[25px]">
+                        <li class="cursor-pointer flex items-center list-none bg-[#EDDA9F] p-[5px_27px] font-light text-[16px] leading-[30px] rounded-[30px] text-black max-[500px]:text-[14px] max-[500px]:p-[5px_22px]">Все</li>
+                        <li class="cursor-pointer flex items-center list-none bg-[#EDDA9F] p-[5px_27px] font-light text-[16px] leading-[30px] rounded-[30px] text-black max-[500px]:text-[14px] max-[500px]:p-[5px_22px]">Непрочитанные</li>
+                        <li class="cursor-pointer flex items-center list-none bg-[#EDDA9F] p-[5px_27px] font-light text-[16px] leading-[30px] rounded-[30px] text-black max-[500px]:text-[14px] max-[500px]:p-[5px_22px]">Избранное</li>
+                    </nav>
+                   
+                    <h3 id="archive-in"
+                        class="flex items-center cursor-pointer gap-[25px] bg-[#E4E4E4] px-[25px] py-[18px] rounded-[20px]">
+                        <a href="/archive">
+                         <img src="/image/archive.svg" alt="">В архиве
+                        </a>
+                    </h3>
+                   
+
+                    <div id="chat-list" class="chats flex flex-col flex-1 min-h-0 gap-[10px] overflow-y-auto mt-[20px]">
+                        <div class="chat-container">
+
+
+                            <div
+                                class="message select bg-[#FDF7EF] relative cursor-pointer flex items-start justify-between p-[13px] rounded-[30px] pin chat-item">
+                                <div class="flex items-start gap-[30px] max-[500px]:gap-[15px]">
+                                    <div id="select-dot"
+                                         class="hidden flex justify-center my-auto w-[30px] h-[30px] rounded-[68px] bg-transparent border border-black items-center">
+                                        <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
+                                    </div>
+                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
+                                    <div class="message-title">
+                                        <h4 class="font-bold text-[18px]">Наименование</h4>
+                                        <p class="font-normal text-[16px]">Описание</p>
+                                    </div>
+                                </div>
+                                <div class="message-info flex flex-col items-end gap-[8px]">
+                                    <p class="font-bold text-[16px]">25.11.2024</p>
+                                    <span
+                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
+                                    <img src="/image/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-container">
+                            <div
+                                class="message relative bg-[#FDF7EF] cursor-pointer flex items-start justify-between p-[13px] rounded-[30px] pin chat-item">
+                                <div class="flex items-start gap-[30px]">
+                                    <div id="select-dot"
+                                         class="hidden flex justify-center my-auto w-[30px] h-[30px] rounded-[68px] bg-transparent border border-black items-center">
+                                        <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
+                                    </div>
+                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
+                                    <div class="message-title">
+                                        <h4 class="font-bold text-[18px]">Наименование</h4>
+                                        <p class="font-normal text-[16px]">Описание</p>
+                                    </div>
+                                </div>
+                                <div class="message-info flex flex-col items-end gap-[8px]">
+                                    <p class="font-bold text-[16px]">25.11.2024</p>
+                                    <span
+                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
+                                    <img src="/image/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-container">
+                            <div
+                                class="message relative bg-[#FDF7EF] cursor-pointer flex items-start justify-between p-[13px] rounded-[30px] chat-item">
+                                <div class="flex items-start gap-[30px]">
+                                    <div id="select-dot"
+                                         class="hidden flex justify-center my-auto w-[30px] h-[30px] rounded-[68px] bg-transparent border border-black items-center">
+                                        <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
+                                    </div>
+                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
+                                    <div class="message-title">
+                                        <h4 class="font-bold text-[18px]">Наименование</h4>
+                                        <p class="font-normal text-[16px]">Описание</p>
+                                    </div>
+                                </div>
+                                <div class="message-info flex flex-col items-end gap-[8px]">
+                                    <p class="font-bold text-[16px]">25.11.2024</p>
+                                    <span
+                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
+                                    <img src="/image/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-container">
+                            <div
+                                class="message relative bg-[#FDF7EF] cursor-pointer flex items-start justify-between p-[13px] rounded-[30px] chat-item">
+                                <div class="flex items-start gap-[30px]">
+                                    <div id="select-dot"
+                                         class="hidden flex justify-center my-auto w-[30px] h-[30px] rounded-[68px] bg-transparent border border-black items-center">
+                                        <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
+                                    </div>
+                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
+                                    <div class="message-title">
+                                        <h4 class="font-bold text-[18px]">Наименование</h4>
+                                        <p class="font-normal text-[16px]">Описание</p>
+                                    </div>
+                                </div>
+                                <div class="message-info flex flex-col items-end gap-[8px]">
+                                    <p class="font-bold text-[16px]">25.11.2024</p>
+                                    <span
+                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
+                                    <img src="/image/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-container">
+                            <div
+                                class="message relative bg-[#FDF7EF] cursor-pointer flex items-start justify-between p-[13px] rounded-[30px] chat-item">
+                                <div class="flex items-start gap-[30px]">
+                                    <div id="select-dot"
+                                         class="hidden flex justify-center my-auto w-[30px] h-[30px] rounded-[68px] bg-transparent border border-black items-center">
+                                        <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
+                                    </div>
+                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
+                                    <div class="message-title">
+                                        <h4 class="font-bold text-[18px]">Наименование</h4>
+                                        <p class="font-normal text-[16px]">Описание</p>
+                                    </div>
+                                </div>
+                                <div class="message-info flex flex-col items-end gap-[8px]">
+                                    <p class="font-bold text-[16px]">25.11.2024</p>
+                                    <span
+                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
+                                    <img src="/image/pin.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="rights flex flex-col flex-1 w-[60%] overflow-hidden min-h-0 relative gap-30px max-[1200px]:w-[50%]">
+                    <div id="messages"
+                         class="messages flex flex-col flex-1 min-h-0 overflow-y-auto p-[20px] gap-[30px] rounded-[35px]">
+
+                    </div>
+                    <div class="input-container bg-white p-[10px] flex items-center gap-[10px] rounded-[20px]"
+                         id="inputBox">
+                        <textarea id="messageInput"
+                                  class="flex-1 max-h-[200px] h-[40px] overflow-y-auto resize-none p-[10px] border rounded-[10px]"
+                                  placeholder="Написать сообщение"></textarea>
+                        <img src="/image/arrow-r.svg" alt="Отправить" class="cursor-pointer">
+                    </div>
+
+                </div>
+            </div>
+            <div id="previewOverlay" class="hidden"></div>
+            <div id="chatPreview" class="hidden">
+                <h3 id="previewTitle">Превью чата</h3>
+                <p id="previewDescription">Описание превью</p>
+                <button id="previewCloseBtn">Закрыть</button>
+            </div>
+        </main>
+
+
+
+        <!-- <a href="/archive" class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300">Archive</a> -->
+    </div>
+    <!-- <script src="/main.js"></script> -->
+</body>
+
+</html>

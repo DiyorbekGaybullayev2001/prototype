@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+    <title>Сравнение тарифов</title>
+</head>
+
+<body class="bg-[#2B2E3A] font-sans">
+    <div class="mx-auto max-w-7xl p-4">
+        <header class="mt-[66px] flex justify-between">
+            <div class="flex items-center gap-[25px]">
+                <button class="flex items-center justify-center rounded-[48px] bg-white p-[12px] py-[20px]"
+                        onclick="window.history.back(); return false;">
+                    <img src="/image/arrow-l.svg" alt="Back">
+                </button>
+                <a href="/pages/profile.html">
+                    <img src="/image/avatar.png" alt="Profile" class="max-w-[60px]">
+                </a>
+            </div>
+            <div class="flex items-center gap-[25px]">
+                <a href="/pages/main.html"
+                   class="rounded-[48px] bg-white px-[65px] py-[12px] text-2xl font-bold text-black text-center leading-[34.1px] hidden md:flex">
+                    Вернуться на главную
+                </a>
+                <a href="/pages/main.html"
+                   class="flex rounded-[48px] bg-white px-[20px] py-[20px] text-2xl font-bold text-black text-center leading-[34.1px] md:hidden">
+                    <img src="/image/home-ico.svg" alt="Home">
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="mt-[120px] mb-[70px] flex items-center gap-[20px]">
+                <div
+                    class="w-[65%] rounded-[30px] bg-white p-[40px] flex flex-col items-start justify-between h-[220px] text-[#404040] font-bold text-[35px] leading-[47.74px] max-[800px]:w-[55%] max-[650px]:w-[55%] max-[650px]:text-[25px] max-[650px]:leading-[37.74px] max-[600px]:h-[190px] max-[500px]:text-[18px] max-[500px]:p-[25px]">
+                    <h2>Статус вашей подписки</h2>
+                </div>
+                <div
+                    class="w-[35%] rounded-[30px] bg-white p-[40px] flex flex-col items-start justify-between h-[220px] max-[800px]:w-[45%] max-[650px]:w-[55%] max-[600px]:h-[190px] max-[500px]:p-[25px]">
+                    <h2 class="text-[#404040] font-bold text-[35px] leading-[47.74px] max-[600px]:text-[25px] max-[500px]:text-[20px]">
+                        Автоплатеж</h2>
+                    <a href="/pages/sub-management.html" id="auto-payBlock"
+                       class="rounded-[47px] bg-[#2B2E3A] p-[16px_30px] text-[16px] font-bold leading-[27.28px] text-white cursor-pointer">
+                        Отключить
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex items-center w-full gap-[30px] rounded-[30px] max-[700px]:gap-[0] max-[700px]:bg-white">
+                <div class="w-[50%] rounded-[30px] bg-white p-[20px] max-[700px]:p-[10px]">
+                    <div class="relative w-full h-[450px] max-[1100px]:h-[400px] max-[950px]:h-[300px] max-[800px]:h-auto rounded-[20px]">
+                        <img class="rounded-[20px] w-full h-[450px] max-[1100px]:h-[400px] max-[950px]:h-[300px] max-[800px]:h-auto relative max-[550px]:h-[161px]"
+                             src="/image/compare-img.png" alt="Subscription Image">
+                        <a href="/pages/payment.html"
+                           class="absolute bottom-[57px] left-1/2 -translate-x-1/2 flex items-center justify-between rounded-[47px] bg-white p-[15px_30px] text-[16px] font-normal text-black w-fit gap-[10px] max-[1100px]:text-[12px] max-[1100px]:bottom-[30px] max-[1100px]:w-[250px] max-[700px]:w-[180px]  max-[600px]:w-[150px] max-[600px]:p-[10px_20px]">
+                            Оплатить подписку
+                            <img src="/image/arrow-r.svg" class="max-[600px]:hidden" alt="Arrow Right">
+                        </a>
+                    </div>
+                    <h3 class="mt-[40px] font-bold text-[#404040] text-[25px] mb-[20px]">Тариф</h3>
+                    <div class="flex flex-col gap-[25px]">
+                        <h6 class="flex items-start gap-[20px] text-[#404040] text-[16px] font-normal max-[700px]:text-[14px]">
+                            <span class="flex h-[17px] min-w-[17px] rounded-[68px] bg-[#595959] max-[500px]:min-w-[12px] max-[500px]:h-[12px]"></span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        </h6>
+                        <h6 class="flex items-start gap-[20px] text-[#404040] text-[16px] font-normal max-[700px]:text-[14px]">
+                            <span class="flex h-[17px] min-w-[17px] rounded-[68px] bg-[#595959] max-[500px]:min-w-[12px] max-[500px]:h-[12px]"></span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        </h6>
+                        <h6 class="flex items-start gap-[20px] text-[#404040] text-[16px] font-normal max-[700px]:text-[14px]">
+                            <span class="flex h-[17px] min-w-[17px] rounded-[68px] bg-[#595959] max-[500px]:min-w-[12px] max-[500px]:h-[12px]"></span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        </h6>
+                        <h6 class="flex items-start gap-[20px] text-[#404040] text-[16px] font-normal max-[700px]:text-[14px]">
+                            <span class="flex h-[17px] min-w-[17px] rounded-[68px] bg-[#595959] max-[500px]:min-w-[12px] max-[500px]:h-[12px]"></span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        </h6>
+                    </div>
+                </div>
+
+                <div class="w-[50%] rounded-[30px] bg-white p-[20px] max-[700px]:p-[10px]">
+                    <div class="relative w-full h-[450px] max-[1100px]:h-[400px] max-[950px]:h-[300px] max-[800px]:h-auto rounded-[20px]">
+                        <img class="rounded-[20px] w-full h-[450px] max-[1100px]:h-[400px] max-[950px]:h-[300px] max-[800px]:h-auto relative max-[550px]:h-[161px]"
+                             src="/image/compare-img.png" alt="Subscription Image">
+                        <a href="/pages/payment.html"
+                           class="absolute bottom-[57px] left-1/2 -translate-x-1/2 flex items-center justify-between rounded-[47px] bg-white p-[15px_30px] text-[16px] font-normal text-black w-fit gap-[10px] max-[1100px]:text-[12px] max-[1100px]:bottom-[30px] max-[1100px]:w-[250px] max-[700px]:w-[180px]  max-[600px]:w-[150px] max-[600px]:p-[10px_20px]">
+                            Оплатить подписку
+                            <img src="/image/arrow-r.svg" class="max-[600px]:hidden" alt="Arrow Right">
+                        </a>
+                    </div>
+                    <h3 class="mt-[40px] font-bold text-[#404040] text-[25px] mb-[20px]">Тариф</h3>
+                    <div class="flex flex-col gap-[25px]">
+                        <h6 class="flex items-start gap-[20px] text-[#404040] text-[16px] font-normal max-[700px]:text-[14px]">
+                            <span class="flex h-[17px] min-w-[17px] rounded-[68px] bg-[#595959] max-[500px]:min-w-[12px] max-[500px]:h-[12px]"></span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        </h6>
+                        <h6 class="flex items-start gap-[20px] text-[#404040] text-[16px] font-normal max-[700px]:text-[14px]">
+                            <span class="flex h-[17px] min-w-[17px] rounded-[68px] bg-[#595959] max-[500px]:min-w-[12px] max-[500px]:h-[12px]"></span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        </h6>
+                        <h6 class="flex items-start gap-[20px] text-[#404040] text-[16px] font-normal max-[700px]:text-[14px]">
+                            <span class="flex h-[17px] min-w-[17px] rounded-[68px] bg-[#595959] max-[500px]:min-w-[12px] max-[500px]:h-[12px]"></span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        </h6>
+                        <h6 class="flex items-start gap-[20px] text-[#404040] text-[16px] font-normal max-[700px]:text-[14px]">
+                            <span class="flex h-[17px] min-w-[17px] rounded-[68px] bg-[#595959] max-[500px]:min-w-[12px] max-[500px]:h-[12px]"></span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer
+            class="mt-[40px] mb-[50px] flex items-center justify-between text-white text-[16px] font-light leading-[27.28px] max-[650px]:flex-col max-[650px]:items-start">
+            <div class="flex flex-col items-start">
+                Все права защищены. <br> © 2025 ИП Распутин Иван Николаевич
+            </div>
+            <div class="flex flex-col items-end max-[650px]:items-start">
+                <a href="/pages/agreement.html">Оферта</a>
+                <a href="/pages/agreement.html">Политика конфиденциальности</a>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>

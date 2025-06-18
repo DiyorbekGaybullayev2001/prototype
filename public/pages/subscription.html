@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Подписка</title>
+</head>
+
+<body>
+    <div class="wrapper bg-[#2B2E3A]">
+        <div class="container max-w-7xl mt-0 mx-auto p-[0_15px]">
+            <header class="flex justify-between mt-[66px]">
+                <div class="header__left flex items-center gap-[25px]">
+                    <button
+                        class="back bg-white-important py-[20px] px-[12px] rounded-[48px] flex justify-center align-center"
+                        onclick="window.history.back(); return false;">
+                        <img src="/image/arrow-l.svg" alt="">
+                    </button>
+                    <a href="/pages/profile.html">
+                        <img src="/image/avatar.png" alt="" class="max-w-[60px]">
+                    </a>
+                </div>
+                <div class="flex items-center gap-[25px]">
+                    <a href="/pages/main.html"
+                        class="bg-white-important rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-black px-[65px] py-[12px] max-[600px]:hidden">
+                        Вернуться на главную
+                    </a>
+                    <a href="/pages/main.html"
+                        class="hidden bg-white-important rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-black px-[20px] py-[20px] max-[600px]:flex">
+                        <img src="/image/home-ico.svg" alt="">
+                    </a>
+                </div>
+            </header>
+            <main>
+                <div class="two-blocks flex items-center gap-[20px] mt-[120px] mb-[70px]">
+                    <div
+                        class="block w-[65%] h-[220px] bg-[#FFFFFF] p-[40px] h-[220px] rounded-[30px] font-bold text-[35px] leading-[47.74px] text-[#404040] flex flex-col items-start justify-between max-[800px]:w-[55%] max-[650px]:w-[55%] max-[650px]:text-[25px] max-[650px]:text-[20px] max-[650px]:leading-[37.74px] max-[600px]:h-[190px]  max-[500px]:text-[18px] max-[500px]:p-[25px]">
+                        <h2>Статус вашей подписки</h2>
+                    </div>
+                    <div
+                        class="block w-[35%] bg-[#FFFFFF] p-[40px] h-[220px] rounded-[30px] flex flex-col items-start justify-between max-[800px]:w-[45%] max-[650px]:w-[55%] max-[600px]:h-[190px] max-[500px]:p-[25px]">
+                        <h2
+                            class="font-bold text-[35px] leading-[47.74px] text-[#404040] max-[600px]:text-[25px] max-[500px]:text-[20px]">
+                            Автоплатеж</h2>
+                        <a href="/pages/sub-management.html" id="auto-payBlock"
+                            class="font-bold text-[16px] leading-[27.28px] text-white bg-[#2B2E3A] rounded-[47px] p-[16px_30px] cursor-pointer">
+                            Отключить
+                        </a>
+                    </div>
+
+
+                </div>
+                <div id="full-tarif">
+                    <div class="cards flex items-center gap-[26px] overflow-x-auto">
+                        <div class="card bg-white p-[20px] max-w-[350px] rounded-[30px]">
+                            <img class="main-img max-w-[310px] rounded-[20px] h-[176px] object-cover min-w-[310px]"
+                                src="/image/tarif1.png" alt="">
+                            <h3 class="mt-[21px] font-bold text-[25px] leading-[34.1px] mb-[8px]">Тариф</h3>
+                            <p class="font-normal text-[16px] leading-[25px] tracking-[1px] mb-[37px]">Lorem ipsum dolor
+                                sit
+                                amet, consectetur adipiscing elit, sed do </p>
+                            <button
+                                class="select-tariff-btn border-btn-2 log-in__btn flex items-center justify-between bg-yellow-300 rounded-[48px] py-3 px-[30px] w-full text-center font-normal text-[16px] leading-[34.1px] border-2 border-transparent max-[600px]:py-2">
+                                <h4>Выбрать</h4>
+                                <img src="/image/arrow-r.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="card bg-white p-[20px] max-w-[350px] rounded-[30px]">
+                            <img class="main-img max-w-[310px] rounded-[20px] h-[176px] object-cover min-w-[310px]"
+                                src="/image/tarif-2.png" alt="">
+                            <h3 class="mt-[21px] font-bold text-[25px] leading-[34.1px] mb-[8px]">Тариф</h3>
+                            <p class="font-normal text-[16px] leading-[25px] tracking-[1px] mb-[37px]">Lorem ipsum dolor
+                                sit
+                                amet, consectetur adipiscing elit, sed do </p>
+                            <button
+                                class="select-tariff-btn border-btn-2 log-in__btn flex items-center justify-between bg-yellow-300 rounded-[48px] py-3 px-[30px] w-full text-center font-normal text-[16px] leading-[34.1px] border-2 border-transparent">
+                                <h4>Выбрать</h4>
+                                <img src="/image/arrow-r.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="card bg-white p-[20px] max-w-[350px] rounded-[30px]">
+                            <img class="main-img max-w-[310px] rounded-[20px] h-[176px] object-cover min-w-[310px]"
+                                src="/image/tarif-3.png" alt="">
+                            <h3 class="mt-[21px] font-bold text-[25px] leading-[34.1px] mb-[8px]">Тариф</h3>
+                            <p class="font-normal text-[16px] leading-[25px] tracking-[1px] mb-[37px]">Lorem ipsum dolor
+                                sit
+                                amet, consectetur adipiscing elit, sed do </p>
+                            <button
+                                class="select-tariff-btn border-btn-2 log-in__btn flex items-center justify-between bg-yellow-300 rounded-[48px] py-3 px-[30px] w-full text-center font-normal text-[16px] leading-[34.1px] border-2 border-transparent">
+                                <h4>Выбрать</h4>
+                                <img src="/image/arrow-r.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="card bg-white p-[20px] max-w-[350px] rounded-[30px]">
+                            <img class="main-img max-w-[310px] rounded-[20px] h-[176px] object-cover min-w-[310px]"
+                                src="/image/tarif-4.png" alt="">
+                            <h3 class="mt-[21px] font-bold text-[25px] leading-[34.1px] mb-[8px]">Тариф</h3>
+                            <p class="font-normal text-[16px] leading-[25px] tracking-[1px] mb-[37px]">Lorem ipsum dolor
+                                sit
+                                amet, consectetur adipiscing elit, sed do </p>
+                            <button
+                                class="select-tariff-btn border-btn-2 log-in__btn flex items-center justify-between bg-yellow-300 rounded-[48px] py-3 px-[30px] w-full text-center font-normal text-[16px] leading-[34.1px] border-2 border-transparent">
+                                <h4>Выбрать</h4>
+                                <img src="/image/arrow-r.svg" alt="">
+                            </button>
+                        </div>
+                        <div class="card bg-white p-[20px] max-w-[350px] rounded-[30px]">
+                            <img class="main-img max-w-[310px] rounded-[20px] h-[176px] object-cover min-w-[310px]"
+                                src="/image/tarif-2.png" alt="">
+                            <h3 class="mt-[21px] font-bold text-[25px] leading-[34.1px] mb-[8px]">Тариф</h3>
+                            <p class="font-normal text-[16px] leading-[25px] tracking-[1px] mb-[37px]">Lorem ipsum dolor
+                                sit
+                                amet, consectetur adipiscing elit, sed do </p>
+                            <button
+                                class="select-tariff-btn border-btn-2 log-in__btn flex items-center justify-between bg-yellow-300 rounded-[48px] py-3 px-[30px] w-full text-center font-normal text-[16px] leading-[34.1px] border-2 border-transparent">
+                                <h4>Выбрать</h4>
+                                <img src="/image/arrow-r.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div
+                        class="block-2 bg-[#FFFFFF] p-[40px] rounded-[30px] min-h-[431px] flex flex-col gap-[20px] mb-[83px] mt-[70px]">
+                        <h2 class="font-bold text-[35px] leading-[47.74px] text-[#404040] mb-[25px]">История</h2>
+                        <div class="block-content flex items-center justify-between max-[750px]:flex-col max-[750px]:items-start">
+                            <div class="">
+                                <h4 class="font-bold text-[25px] leading-[34.1px] text-[#000000] mb-[5px]">Тариф</h4>
+                                <p class="font-normal text-[16px] leading-[25px] tracking-[1px] text-[#000000]">Lorem
+                                    ipsum
+                                    dolor sit amet, consectetur adipiscing elit, sed do </p>
+                            </div>
+                            <div class="right">
+                                <p class="font-normal text-[16px] leading-[25px] tracking-[1px] text-[#000000] max-[750px]:mt-[10px]">Вчера
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="block-content flex items-center justify-between max-[750px]:flex-col max-[750px]:items-start">
+                            <div class="">
+                                <h4 class="font-bold text-[25px] leading-[34.1px] text-[#000000] mb-[5px]">Тариф</h4>
+                                <p class="font-normal text-[16px] leading-[25px] tracking-[1px] text-[#000000]">Lorem
+                                    ipsum
+                                    dolor sit amet, consectetur adipiscing elit, sed do </p>
+                            </div>
+                            <div class="right">
+                                <p class="font-normal text-[16px] leading-[25px] tracking-[1px] text-[#000000] max-[750px]:mt-[10px]">
+                                    20.11.2024
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="full-cards" class="flex flex-col hidden">
+                    <div class="mb-[30px] p-[20px] bg-white rounded-[30px]">
+                        <div class="relative">
+                            <img src="/image/subs-full.png"
+                                class="max-w-100% brightness-25 rounded-[20px] max-[650px]:h-[209px] max-[650px]:w-auto"
+                                alt="">
+                            <div
+                                class="flex absolute bottom-[40px] right-[30px]  items-center gap-[40px] max-[650px]:bottom-[15px] max-[600px]:gap-[20px] max-[600px]:right-[15px]">
+                                <a href="/pages/compare.html"
+                                    class="flex items-center bg-white text-black font-normal rounded-[47px] text-[16px] p-[15px_30px_15px_30px] max-[600px]:text-[12px] max-[600px]:p-[10px_25px] max-[450px]:p-[10px_15px]">Сравнить
+                                    тариф</a>
+                                <a href="/pages/payment.html"
+                                    class="flex items-center bg-white text-black font-normal rounded-[47px] text-[16px] p-[15px_30px_15px_30px] gap-[10px] max-[600px]:text-[12px] max-[600px]:gap-[4px] max-[600px]:p-[10px_25px] max-[450px]:p-[10px_15px]">Оплатить
+                                    подписку <img src="/image/arrow-r.svg" alt=""></a>
+                            </div>
+                            <div id="active-sub"
+                                class="absolute hidden p-[10px] flex items-center justify-center rounded-[68px] bg-[#EDDA9F] top-[25px] left-[25px]">
+                                <span
+                                    class="bg-white w-[20px] flex h-[20px] rounded-[68px] max-[550px]:w-[10px] max-[550px]:h-[10px]"></span>
+                            </div>
+                        </div>
+                        <h4 class="mt-[50px] font-bold text-[25px] leading-[34.1px] text-[#404040]">Тариф</h4>
+                        <p class="mt-[20px] font-normal text-[16px] leading-[25px]">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do </p>
+
+
+
+                    </div>
+                    <div class="mb-[30px] p-[20px] bg-white rounded-[30px]">
+                        <div class="relative">
+                            <img src="/image/subs-full.png"
+                                class="max-w-100% brightness-25 rounded-[20px] max-[650px]:h-[209px] max-[650px]:w-auto"
+                                alt="">
+                            <div
+                                class="flex absolute bottom-[40px] right-[30px]  items-center gap-[40px] max-[650px]:bottom-[15px] max-[600px]:gap-[20px] max-[600px]:right-[15px]">
+                                <a href="/pages/compare.html"
+                                    class="flex items-center bg-white text-black font-normal rounded-[47px] text-[16px] p-[15px_30px_15px_30px] max-[600px]:text-[12px] max-[600px]:p-[10px_25px] max-[450px]:p-[10px_15px]">Сравнить
+                                    тариф</a>
+                                <a href="/pages/payment.html"
+                                    class="flex items-center bg-white text-black font-normal rounded-[47px] text-[16px] p-[15px_30px_15px_30px] gap-[10px] max-[600px]:text-[12px] max-[600px]:gap-[4px] max-[600px]:p-[10px_25px] max-[450px]:p-[10px_15px]">Оплатить
+                                    подписку <img src="/image/arrow-r.svg" alt=""></a>
+                            </div>
+
+                        </div>
+                        <h4 class="mt-[50px] font-bold text-[25px] leading-[34.1px] text-[#404040]">Тариф</h4>
+                        <p class="mt-[20px] font-normal text-[16px] leading-[25px]">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do </p>
+
+
+
+                    </div>
+                </div>
+            </main>
+            <footer
+                class="footer flex items-center justify-between text-white font-light text-[16px] leading-[27.28px] mb-[50px] max-[650px]:flex-col max-[650px]:items-start">
+                <div class="f-left flex flex-col items-start">
+                    Все права защищены. <br> © 2025 ИП Распутин Иван Николаевич
+                </div>
+                <div class="f-right flex flex-col items-end max-[650px]:items-start">
+                    <a href="/pages/agreement.html">Оферта</a>
+                    <a href="/pages/agreement.html">Политика конфиденциальности</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+
+
+</html>

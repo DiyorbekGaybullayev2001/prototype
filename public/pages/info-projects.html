@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Информация об проекте</title>
+</head>
+
+<body class="bg-[#F2F2F2]">
+
+    <div class="wrapper max-w-7xl mt-0 mx-auto pb-[20px] p-[0_15px]">
+        <header class="flex justify-between mt-[66px]">
+            <div class="flex items-center gap-[25px] max-[430px]:gap-[12px]">
+                <button class="bg-white-important py-[20px] px-[12px] rounded-[48px] flex justify-center items-center"
+                    onclick="window.history.back(); return false;">
+                    <img src="/image/arrow-l.svg" alt="">
+                </button>
+                <a href="/pages/profile.html">
+                    <img src="/image/avatar.png" alt="" class="max-w-[60px]">
+                </a>
+            </div>
+            <div class="flex items-center gap-[25px] max-[430px]:gap-[12px]">
+                <a href="/pages/chats.html"
+                    class="bg-2B2E3A rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[55px] py-[12px] max-[1050px]:hidden">
+                    Чаты
+                </a>
+                <a href="/pages/chats.html"
+                    class="hidden bg-2B2E3A rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] max-[1050px]:flex">
+                    <img src="/image/message-ico.svg" class="w-[25px]" alt="">
+                </a>
+                <a href="/pages/support.html"
+                    class="bg-2B2E3A rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[55px] py-[12px] max-[1050px]:hidden">
+                    Поддержка
+                </a>
+                <a href="/pages/support.html"
+                    class="hidden bg-2B2E3A rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] max-[1050px]:flex">
+                    <img src="/image/support-ico.svg" class="w-[25px]" alt="">
+                </a>
+                <a href="/pages/main.html"
+                    class="bg-2B2E3A rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[55px] py-[12px] max-[1000px]:hidden">
+                    Вернуться на главную
+                </a>
+                <a href="/pages/main.html"
+                    class="hidden bg-2B2E3A rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] max-[1000px]:flex">
+                    <img src="/image/home-icoW.svg" class="w-[25px]" alt="">
+                </a>
+            </div>
+        </header>
+        <main class="flex flex-col">
+            <div class="flex flex-col items-center gap-[30px] mt-[64px] mb-[80px]">
+                <div
+                    class="w-full bg-white p-[20px_40px_20px_20px] gap-[10px] flex justify-between items-center rounded-[35px] hover:shadow-xl transition-all transition-[.7s] max-[1150px]:flex-col max-[1150px]:items-start max-[600px]: p-[15px]">
+                    <div
+                        class="w-full max-[1150px]:flex max-[1150px]:items-center max-[1150px]:justify-between max-[1050px]:flex-col max-[1050px]:items-start">
+                        <h3 class="font-bold text-[35px] text-black mb-[25px]">Наименование проекта</h3>
+                        <p class="font-normal text-[25px] text-black op-[50%] leading-[30px] max-w-[511px]">Lorem ipsum
+                            dolor sit amet, consectetur
+                            adipiscing elit, sed do </p>
+                    </div>
+                    <div class="relative group w-fit">
+                        <img id="previewImage"
+                            class="w-full max-w-[610px] max-h-[240px] rounded-[20px] max-[750px]:max-w-[410px] max-[550px]:max-w-[350px] max-h-[350px]"
+                            src="/image/project-info.svg" alt="">
+                        <label for="imageUpload"
+                            class="absolute inset-0 bg-[#0000007c] flex items-center justify-center rounded-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+                            <img src="/image/update-img.svg" alt="Upload">
+                        </label>
+                        <input type="file" id="imageUpload" class="hidden" accept="image/*">
+                    </div>
+
+
+
+                </div>
+                <div class="w-full  flex justify-between items-center rounded-[35px] gap-[25px] max-[1000px]:flex-col">
+                    <div
+                        class="w-[50%] bg-white p-[40px] flex  items-center rounded-[35px] hover:shadow-xl transition-all transition-[.7s] relative min-h-[280px] max-[1000px]:w-full">
+                        <div>
+                            <h3 class="font-bold text-[35px] text-black mb-[25px] max-[600px]:text-[27px]">Инфо об
+                                исполнителе</h3>
+                            <p
+                                class="font-normal text-[25px] text-black op-[50%] leading-[30px] max-w-[511px] max-[600px]:text-[20px]">
+                                Lorem
+                                ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do </p>
+                            <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img
+                                    class=" rounded-[10px]" src="/image/profile-mini.svg" alt=""></div>
+                        </div>
+
+                    </div>
+                    <div
+                        class="w-[50%] bg-white p-[40px] flex  items-center rounded-[35px] hover:shadow-xl transition-all transition-[.7s] relative min-h-[280px] max-[1000px]:w-full">
+                        <div>
+                            <h3 class="font-bold text-[35px] text-black mb-[25px] max-[600px]:text-[27px]">Инфо об
+                                заказчике</h3>
+                            <p
+                                class="font-normal text-[25px] text-black op-[50%] leading-[30px] max-w-[511px] max-[600px]:text-[20px]">
+                                Lorem
+                                ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do </p>
+                            <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img
+                                    class=" px-[6px] py-[5px] bg-white rounded-[10px]" src="/image/profile-mini2.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <h3 class="mb-[21px] font-bold text-[50px]">Вид проекта</h3>
+            <div class="grid grid-cols-2 gap-[30px] w-full justify-center mb-[30px] max-[800px]:grid-cols-1">
+                <div
+                    class="bg-white p-[40px] w-full min-h-[280px] rounded-[35px] relative hover:shadow-xl transition-all transition-[.7s]">
+                    <h3 class="font-bold text-[36px] text-black mb-[25px] max-[600px]:text-[30px]">Дата стара</h3>
+                    <p class="font-normal text-[25px] text-black op-[50%] leading-[30px] max-w-[511px]">Lorem ipsum
+                        dolor sit amet, consectetur
+                        adipiscing elit, sed do </p>
+                    <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img
+                            class=" rounded-[10px]" src="/image/calendar.svg" alt=""></div>
+                </div>
+                <div
+                    class="bg-white p-[40px] w-full min-h-[280px] rounded-[35px] relative hover:shadow-xl transition-all transition-[.7s]">
+                    <h3 class="font-bold text-[36px] text-black mb-[25px] max-[600px]:text-[30px]">Статус</h3>
+                    <p class="font-normal text-[25px] text-black op-[50%] leading-[30px] max-w-[511px]">Lorem ipsum
+                        dolor sit amet, consectetur
+                        adipiscing elit, sed do </p>
+                    <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img
+                            class=" rounded-[10px]" src="/image/status.svg" alt=""></div>
+                </div>
+                <div
+                    class="bg-white p-[40px] w-full min-h-[280px] rounded-[35px] relative hover:shadow-xl transition-all transition-[.7s]">
+                    <h3 class="font-bold text-[36px] text-black mb-[25px] max-[600px]:text-[30px]">Текущий этап</h3>
+                    <p class="font-normal text-[25px] text-black op-[50%] leading-[30px] max-w-[511px]">Lorem ipsum
+                        dolor sit amet, consectetur
+                        adipiscing elit, sed do </p>
+                    <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img
+                            class=" rounded-[10px]" src="/image/now.svg" alt=""></div>
+                </div>
+                <div
+                    class="bg-white p-[40px] w-full min-h-[280px] rounded-[35px] relative hover:shadow-xl transition-all transition-[.7s]">
+                    <h3
+                        class="font-bold text-[36px] text-black mb-[25px] max-w-[370px] leading-[49.1px] max-[600px]:text-[30px]">
+                        Дата сдачи
+                        очередного этапа</h3>
+                    <p class="font-normal text-[25px] text-black op-[50%] leading-[30px] max-w-[511px]">Lorem ipsum
+                        dolor sit amet, consectetur
+                        adipiscing elit, sed do </p>
+                    <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img
+                            class=" rounded-[10px]" src="/image/date.svg" alt=""></div>
+                </div>
+            </div>
+            <div class="bg-white p-[40px_25px_25px_50px] relative rounded-[30px]">
+                <h3 class="font-bold text-[36px] text-black mb-[25px]">Финансы</h3>
+                <h6 class="font-bold text-[25px] mb-[13px] text-black op-[50%] leading-[30px] max-w-[511px]">1.000 ₽
+                </h6>
+                <p class="font-normal text-[25px] mb-[20px] text-black op-[50%] leading-[30px] max-w-[511px]">Получено
+                </p>
+                <div class="flex items-center gap-[22px]">
+                    <div class="w-full bg-[#F3F3F3] h-[30px] rounded-[100px] relative">
+                        <div class="absolute w-[5%] h-full bg-[#00950A] rounded-[100px]"></div>
+                    </div>
+                    <h4 class="font-bold text-[25px] whitespace-nowrap">200.000 ₽</h4>
+                </div>
+                <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img
+                        class=" rounded-[10px]" src="/image/ruble.svg" alt=""></div>
+            </div>
+            <h3 class="mb-[40px] font-bold text-[35px] mt-[80px] ">Цель проекта</h3>
+            <div id="textContainer"
+                class="w-full min-h-[420px] bg-white p-[40px] rounded-[30px] overflow-hidden relative mb-[80px]">
+                <h3 class="font-bold text-[36px] max-[700px]:text-[30px] ">Описание</h3>
+                <h3 class="font-light text-[25px]">Описание проекта</h3>
+
+                <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img class=""
+                        src="/image/document.svg" alt=""></div>
+            </div>
+            <h3 class="mb-[40px] font-bold text-[35px] mt-[50px] ">Информация по проекту</h3>
+            <div id="textContainer"
+                class="w-full min-h-[420px] bg-white p-[40px] rounded-[30px] overflow-hidden relative mb-[40px] max-[700px]:p-[20px]">
+                <h3 class="font-bold text-[36px] max-[700px]:text-[30px]  ">Информация об объекте</h3>
+                <h3 class="font-light text-[25px]">Описание проекта</h3>
+                <div class="w-full space-y-4 mt-[50px]">
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Актуальное</span>
+                            <button class="p-[15px_20px] rounded-[68px] bg-[#EDDA9F] "><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do .</div>
+                    </div>
+
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px] "
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Текущие</span>
+                            <button class="p-[15px_20px_15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                    </div>
+
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Важное</span>
+                            <button class="p-[15px_20px_15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img class=""
+                        src="/image/info-ico.svg" alt=""></div>
+            </div>
+            <div id="textContainer"
+                class="w-full min-h-[420px] bg-white p-[40px] rounded-[30px] overflow-hidden relative mb-[80px] max-[700px]:p-[20px]">
+                <h3 class="font-bold text-[36px] max-[700px]:text-[30px] ">Этапы проекта</h3>
+                <h3 class="font-light text-[25px]">Описание проекта</h3>
+                <div class="w-full space-y-4 mt-[50px]">
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Текущий этап</span>
+                            <button class="p-[15px_20px_15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do .</div>
+                    </div>
+
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px] "
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Статус этапа</span>
+                            <button class="p-[15px_20px_15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                    </div>
+
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Срок сдачи проекта</span>
+                            <button class="p-[15px_20px_15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img class=""
+                        src="/image/tasks.svg" alt=""></div>
+            </div>
+            <div id="textContainer"
+                class="w-full min-h-[420px] bg-white p-[40px] rounded-[30px] overflow-hidden relative mb-[80px] max-[700px]:p-[20px]">
+                <h3 class="font-bold text-[36px] max-[700px]:text-[30px] ">Оплата</h3>
+                <h3 class="font-light text-[25px]">Описание проекта</h3>
+                <div class="w-full space-y-4 mt-[50px]">
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Общая стоимость работ</span>
+                            <button class="p-[15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do .</div>
+                    </div>
+
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px] "
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Порядок оплаты</span>
+                            <button class="p-[15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                    </div>
+
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Фактически получено</span>
+                            <button class="p-[15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                    </div>
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Возвращено</span>
+                            <button class="p-[15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                    </div>
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Остаток к оплате</span>
+                            <button class="p-[15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                    </div>
+                    <div class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
+                        <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]"
+                            onclick="togglePanel(this)">
+                            <span class="font-bold text-[25px] leading-[36px] max-[600px]:text-[20px]">Формат оплаты</span>
+                            <button class="p-[15px_20px] rounded-[68px] bg-[#EDDA9F]"><img src="/image/arrow-r.svg"
+                                    class="rotate-180 w-6 h-6 transform transition-transform" alt="Toggle"></button>
+                        </div>
+                        <div class="p-4 hidden">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#2B2E3A] p-[12px] absolute right-[25px] top-[25px] rounded-[20px]"><img class=""
+                        src="/image/ruble.svg" alt=""></div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты</title>
+</head>
+
+<body class="bg-[#F2F2F2]">
+    <div id="overlay" class="hidden z-10 fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
+
+    <div class="wrapper max-w-7xl mt-0 mx-auto pb-[20px] p-[0_15px]">
+        <header class="flex justify-between mt-[66px]">
+            <div class="flex items-center gap-[25px]">
+                <button class="bg-white-important py-[20px] px-[12px] rounded-[48px] flex justify-center items-center"
+                    onclick="window.history.back(); return false;">
+                    <img src="/image/arrow-l.svg" alt="">
+                </button>
+                <a href="/pages/profile.html">
+                    <img src="/image/avatar.png" alt="" class="max-w-[60px]">
+                </a>
+            </div>
+            <div class="flex items-center gap-[25px]">
+<a href="/pages/chats.html"
+    class="bg-2B2E3A flex items-center gap-[10px] justify-between  rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[55px] py-[12px] max-[900px]:hidden">
+    Чаты <span class="w-[40px] h-[40px] p-[6px_14px] rounded-[90px] bg-[#A0ED9F] flex items-center justify-center text-black text-[16px]">5</span>
+    </a>
+                <a href="/pages/chats.html"
+                    class="hidden bg-2B2E3A rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] max-[900px]:flex">
+                    <img src="/image/message-ico.svg" class="w-[25px]" alt="">
+                </a>
+                <a href="/pages/subscription.html"
+                    class="bg-2B2E3A rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[55px] py-[12px] max-[500px]:text-[20px] max-[500px]:px-[35px] max-[420px]:text-[18px] max-[420px]:px-[30px]">
+                    Тариф
+                </a>
+            </div>
+        </header>
+        <main class="flex flex-col">
+            <div class="mt-[61px] flex gap-[20px] max-[1200px]:flex-col">
+                <div
+                    class="bg-[#FDF7EF] p-[35px] pr-[40px] pb-[45px] rounded-[28px] w-fit max-[950px]:w-full max-[750px]:p-[15px]">
+                    <h2 class="font-medium text-[35px] leading-[54.56px] mb-[50px]">Контакты</h2>
+                    <div class="flex items-center gap-[40px] overflow-x-auto">
+                        <div
+                            class="flex justify-between bg-white p-[25px] rounded-[25px] w-[380px] min-w-[300px] h-[200px] max-[600px]:h-[160px]">
+                            <div class="block-text">
+                                <h4
+                                    class="font-semibold text-[25px] leading-[34.1px] mb-[15px] max-[750px]:text-[20px]">
+                                    Почта</h4>
+                                <a href="mailto:info@mail.ru"
+                                    class="font-normal text-[16px] leading-[27.28px] ">info@mail.ru</a>
+                            </div>
+                            <img src="/image/mail.svg" alt="" class="max-w-[50px] max-h-[50px]">
+                        </div>
+                        <div
+                            class="flex justify-between bg-white p-[25px] rounded-[25px] w-[380px] h-[200px] min-w-[300px] max-[600px]:h-[160px]">
+                            <div class="block-text">
+                                <h4
+                                    class="font-semibold text-[25px] leading-[34.1px] mb-[15px] max-[750px]:text-[20px]">
+                                    Телефон</h4>
+                                <a href="tel:+79999999999" class="font-normal text-[16px] leading-[27.28px] ">+7 (999)
+                                    999-99-99</a>
+                            </div>
+                            <img src="/image/phone.svg" alt="" class="max-w-[50px] max-h-[50px]">
+                        </div>
+                    </div>
+                    <h4 class="font-semibold text-[25px] leading-[40.92px] mt-[40px] mb-[40px]">Мы в социальных сетях
+                    </h4>
+                    <div class="grid grid-cols-2 gap-[40px] max-[600px]:gap-[25px]">
+                        <a href="#">
+                            <div
+                                class="flex items-center justify-between bg-white p-[15px] pl-[30px] rounded-[30px] w-[380px] max-[850px]:w-[300px] max-[700px]:w-full max-[700px]:min-h-[150px] max-[700px]:flex-col max-[700px]:items-start">
+                                <h3 class="font-bold text-[25px] leading-[40.92px] max-[550px]:text-[20px]">ВКонтакте</h3>
+                                <span
+                                    class="bg-[#EDDA9F] rounded-full w-[60px] h-[60px] flex items-center justify-center max-[700px]:ml-auto max-[550px]:w-[45px] max-[550px]:h-[45px]">
+                                    <img class="max-[550px]:w-[20px]" src="/image/arrow-smaller.svg" alt="">
+                                </span>
+                            </div>
+                        </a>
+                        <a href="#" id="open-modal">
+                            <div
+                                class="flex items-center justify-between bg-white p-[15px] pl-[30px] rounded-[30px] w-[380px] max-[850px]:w-[300px] max-[700px]:w-full max-[700px]:min-h-[150px] max-[700px]:flex-col max-[700px]:items-start">
+                                <h3 class="font-bold text-[25px] leading-[40.92px] max-[550px]:text-[20px]">Instagram</h3>
+                                <div class="flex items-center gap-[10px] max-[700px]:ml-auto">
+                                    <div class="relative info  ">
+                                        <img class="max-[550px]:w-[45px] z-1000" src="/image/info.svg" alt="">
+                                        <div
+                                            class="absolute  z-1000 top-[50%] info-content -translate-y-1/2 right-[70px] w-[490px] h-[126px] p-[30px] rounded-[30px] bg-[#2B2E3A] max-[700px]:w-[390px] max-[700px]:h-auto max-[700px]:w-[290px] max-[600px]:w-[250px] max-[400px]:w-[200px]">
+                                            <p class="font-semibold text-[16px] leading-[21.82px] text-white max-[600px]:text-[14px]">
+                                                Организация
+                                                Meta, а также её продукты Instagram и Facebook, признаны экстремистскими
+                                                на
+                                                территории РФ.</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="bg-[#EDDA9F] rounded-full w-[60px] h-[60px] flex items-center justify-center max-[700px]:ml-auto max-[550px]:w-[45px] max-[550px]:h-[45px]">
+                                        <img class="max-[550px]:w-[20px]" src="/image/arrow-smaller.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div
+                                class="flex items-center justify-between bg-white p-[15px] pl-[30px] rounded-[30px] w-[380px] max-[850px]:w-[300px] max-[700px]:w-full max-[700px]:min-h-[150px] max-[700px]:flex-col max-[700px]:items-start">
+                                <h3 class="font-bold text-[25px] leading-[40.92px] max-[550px]:text-[20px]">WhatsApp</h3>
+                                <span
+                                    class="bg-[#EDDA9F] rounded-full w-[60px] h-[60px] flex items-center justify-center max-[700px]:ml-auto max-[550px]:w-[45px] max-[550px]:h-[45px]">
+                                    <img class="max-[550px]:w-[20px]" src="/image/arrow-smaller.svg" alt="">
+                                </span>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div
+                                class="flex items-center justify-between bg-white p-[15px] pl-[30px] rounded-[30px] w-[380px] max-[850px]:w-[300px] max-[700px]:w-full max-[700px]:min-h-[150px] max-[700px]:flex-col max-[700px]:items-start">
+                                <h3 class="font-bold text-[25px] leading-[40.92px] max-[550px]:text-[20px]" >Telegram</h3>
+                                <span
+                                    class="bg-[#EDDA9F] rounded-full w-[60px] h-[60px] flex items-center justify-center max-[700px]:ml-auto max-[550px]:w-[45px] max-[550px]:h-[45px]">
+                                    <img class="max-[550px]:w-[20px]" src="/image/arrow-smaller.svg" alt="">
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-[26px] w-full h-[752.48px] max-[1200px]:flex-row max-[1200px]:h-auto ">
+                    <a href="/pages/questions.html"
+                        class="bg-2B2E3A p-[40px] rounded-[30px] flex flex-col justify-between items-start w-full h-[50%] max-[1200px]:w-[50%] max-[750px]:h-[30%] max-[550px]:p-[25px]">
+                        <h3 class="font-semibold text-[35px] leading-[54.56px] text-white max-[550px]:text-[25px]">Вопросы</h3>
+                        <button
+                            class="flex items-center justify-between bg-[#EDDA9F] text-black py-3 px-7 w-[208px] rounded-[30px] max-[750px]:hidden">
+                            <p class="font-medium text-[16px]">Подробнее</p>
+                            <img src="/image/arrow-r_small.svg" alt="">
+                        </button>
+                        <p
+                            class="hidden bg-[#EDDA9F] rounded-[65px] ml-auto w-[60px] h-[60px] flex items-center justify-center max-[750px]:flex max-[550px]:w-[45px] max-[550px]:h-[45px]">
+                            <img class="max-[550px]:w-[20px]" src="/image/arrow-smaller.svg" alt="">
+                        </p>
+                    </a>
+                    <a href="/pages/agreement.html"
+                        class="bg-white-important p-[40px] rounded-[30px] flex flex-col justify-between items-start w-full h-[50%] max-[1200px]:w-[50%] max-[750px]:h-[30%] max-[550px]:p-[25px]">
+                        <h3 class="font-semibold text-[35px] leading-[54.56px] max-[550px]:text-[25px]">Соглашение</h3>
+                        <button
+                            class="flex items-center justify-between bg-[#EDDA9F] text-black py-3 px-7 w-[208px] rounded-[30px] max-[750px]:hidden ">
+                            <p class="font-medium text-[16px]">Подробнее</p>
+                            <img src="/image/arrow-r_small.svg" alt="">
+                        </button>
+                        <p
+                            class="hidden bg-[#EDDA9F] rounded-[65px] ml-auto w-[60px] h-[60px] flex items-center justify-center max-[750px]:flex max-[550px]:w-[45px] max-[550px]:h-[45px]">
+                            <img class="max-[550px]:w-[20px]" src="/image/arrow-smaller.svg" alt="">
+                        </p>
+
+
+                    </a>
+                </div>
+            </div>
+        </main>
+        <footer class="mt-[76px] mb-[44px] font-light text-[16px] leading-[27.28px]">
+            <h3>
+                Все права защищены. <br> © 2025 ИП Распутин Иван Николаевич
+            </h3>
+        </footer>
+    </div>
+    <div class="info-modal"></div>
+
+    <script src="/main.js"></script>
+</body>
+
+</html>

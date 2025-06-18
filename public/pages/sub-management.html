@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Управление подпиской</title>
+</head>
+
+<body>
+    <div class="wrapper bg-[#2B2E3A]">
+        <div class="container max-w-7xl mt-0 mx-auto flex flex-col justify-between h-screen p-[0_15px]">
+            <header class="flex justify-between mt-[66px] max-[550px]:mt-[30px]">
+                <div class="header__left flex items-center gap-[25px]">
+                    <button
+                        class="back bg-white-important py-[20px] px-[12px] rounded-[48px] flex justify-center items-center"
+                        onclick="window.history.back(); return false;">
+                        <img src="/image/arrow-l.svg" alt="">
+                    </button>
+                    <a href="/pages/profile.html">
+                        <img src="/image/avatar.png" alt="" class="max-w-[60px]">
+                    </a>
+                </div>
+                <div class="flex items-center gap-[25px]">
+                    <a href="/pages/main.html"
+                        class="bg-white-important rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-black px-[65px] py-[12px] max-[600px]:hidden">
+                        Вернуться на главную
+                    </a>
+                    <a href="/pages/main.html"
+                        class="hidden bg-white-important rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-black px-[20px] py-[20px] max-[600px]:flex">
+                        <img src="/image/home-ico.svg" alt="">
+                    </a>
+                </div>
+            </header>
+            <main>
+                <h2 class="text-white !font-bold text-[50px] mt-[60px] max-[550px]:text-[32px] max-[550px]:mt-[10px]">Управление подпиской</h2>
+                <div id="no-linked">
+                    <h4 class="text-white !font-semibold text-[35px] mt-[20px] opacity-[0.8] max-[550px]:text-[28px]">Нет привязанных карт.</h4>
+                    <p class="text-white text-[24px] mt-[10px] opacity-[0.8] max-[550px]:text-[20px]">Добавьте хотя бы одну банковскую карту,
+                        чтобы подключить автоплатёж.</p>
+                    <button id="add-card-btn"
+                        class="mx-left text-black py-[12px] px-[25px] flex justify-between items-center w-[294px] rounded-[47px] font-semibold text-[16px] bg-white-important !mt-[50px]">Добавить
+                        карту <img src="/image/arrow-r.svg" alt=""></button>
+                </div>
+
+                <div id="linked" class="flex hidden justify-between items-center w-full max-[600px]:items-end">
+                    <div>
+                        <h4 class="text-white font-semibold text-[35px] mt-[20px] opacity-[0.8] max-[550px]:text-[28px]">Подписка активна</h4>
+                        <p class="text-white text-[24px] mt-[10px] opacity-[0.9] max-[550px]:text-[20px]">Действует автоматическое продление
+                            подписки на тариф.</p>
+                        <p class="text-white text-[24px] mt-[10px] opacity-[0.9] max-[550px]:text-[20px]">Следующий автоплатеж будет
+                            осуществлен: 21.12.2025</p>
+                        <div class="flex items-center gap-[25px] mt-[50px] max-[600px]:flex-col max-[600px]:items-start">
+                            <button id="add-card-btn"
+                                class="mx-left text-black py-[12px] px-[25px] flex justify-between items-center w-[294px] rounded-[47px] font-semibold text-[20px] bg-white-important max-[600px]:w-[285px]">Сменить
+                                карту<img src="/image/arrow-r.svg" alt=""></button>
+                            <button id="auto-pay"
+                                class="mx-left text-white border-2 border-solid py-[12px] px-[25px] items-center flex justify-between w-[350px] bg-transparent rounded-[47px] font-semibold text-[20px]  whitespace-nowrap max-[600px]:w-[285px]">Отключить
+                                автоплатеж<img class="invert" src="/image/arrow-r.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="w-[500px] p-[25px] h-[250px] bg-[#EDDA9F] rounded-[20px] flex flex-col justify-between max-[600px]:hidden">
+                        <img class="max-w-[67.68px]" src="/image/card-item.svg" alt="">
+                        <div>
+                            <div class="flex items-center gap-[15px] mb-[6px]">
+                                <div class="flex items-center gap-[10px]">
+                                    <span class="flex w-[15px] h-[15px] bg-[#2B2E3A] rounded-[68px]"></span>
+                                    <span class="flex w-[15px] h-[15px] bg-[#2B2E3A] rounded-[68px]"></span>
+                                    <span class="flex w-[15px] h-[15px] bg-[#2B2E3A] rounded-[68px]"></span>
+                                    <span class="flex w-[15px] h-[15px] bg-[#2B2E3A] rounded-[68px]"></span>
+                                </div>
+                                <h5 id="card-last4" class="font-normal text-[24px] text-[#2B2E3A]"></h5>
+                            </div>
+                            <h5 id="card-expiryy" class="font-normal text-[24px] text-[#2B2E3A]"></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex justify-center items-center">
+                    <div class="bg-white p-6 rounded-lg w-[400px]">
+                        <h3 class="text-[20px] font-semibold mb-4">Добавить карту</h3>
+                        <input id="card-number" type="text" placeholder="Номер карты" maxlength="19"
+                            class="border p-2 w-full mb-2">
+                        <input id="card-expiry" type="text" placeholder="MM/YY" maxlength="5"
+                            class="border p-2 w-full mb-2">
+                        <input id="card-cvc" type="text" placeholder="CVC" maxlength="3"
+                            class="border p-2 w-full mb-2">
+                        <button id="save-card"
+                            class="bg-blue-500 text-white py-2 px-4 rounded w-full">Сохранить</button>
+                    </div>
+                </div>
+
+            </main>
+            <footer
+                class="footer flex items-center justify-between text-white font-light text-[16px] leading-[27.28px] mb-[50px] max-[650px]:flex-col max-[650px]:items-start mt-[100px] max-[550px]:mb-[20px] max-[550px]:mt-[20px]">
+                <div class="f-left flex flex-col items-start">
+                    Все права защищены. <br> © 2025 ИП Распутин Иван Николаевич
+                </div>
+                <div class="f-right flex flex-col items-end max-[650px]:items-start">
+                    <a href="/pages/agreement.html">Оферта</a>
+                    <a href="/pages/agreement.html">Политика конфиденциальности</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+</body>
+
+
+</html>

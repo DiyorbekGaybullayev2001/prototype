@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/image/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="../style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Поддержка</title>
+</head>
+
+<body class="bg-[#F2F2F2]">
+
+
+
+    <div class="wrapper max-w-7xl mt-0 mx-auto pb-[20px] h-screen flex flex-col p-[0_15px]">
+        <header class="flex justify-between mt-[66px]">
+            <div class="flex items-center gap-[25px] hide-on-404">
+                <button class="bg-white-important py-[20px] px-[12px] rounded-[48px] flex justify-center items-center"
+                    onclick="window.history.back(); return false;">
+                    <img src="/image/arrow-l.svg" alt="">
+                </button>
+                <a href="/pages/profile.html">
+                    <img src="/image/avatar.png" alt="" class="max-w-[60px]">
+                </a>
+            </div>
+        
+            <h2 class="chats-h2 max-[800px]:hidden">Служба поддержки</h2>
+        
+            <div class="flex items-center gap-[25px] hide-on-404">
+                <a href="/pages/chats.html"
+                class="bg-2B2E3A rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[55px] py-[12px] max-[900px]:hidden">
+                Чаты
+            </a>
+                <a href="/pages/chats.html"
+                class="hidden bg-2B2E3A rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] max-[900px]:flex">
+                <img src="/image/message-ico.svg" class="w-[25px]" alt="">
+            </a>
+            </div>
+        </header>
+        <main class="flex flex-col w-full flex-1 overflow-hidden ">
+            <div class="flex flex-1 gap-[30px] mt-[27px] min-h-0">
+                <div class="right w-full h-full flex flex-col justify-between">
+                    <div class="chats flex flex-col flex-1 min-h-0 gap-[10px] overflow-y-auto mt-[20px] relative">
+                        <span
+                            class="mx-auto relative flex items-center max-w-[150px] justify-center font-semibold text-[18px] py-[10px] px-[20px] rounded-[30px] bg-[#E4E4E4]">25.11.2024</span>
+                        <div class="person-message flex items-center gap-[25px] w-[50%] max-[800px]:w-[70%] max-[650px]:w-[90%] max-[500px]:w-full">
+                            <img src="/image/avatar.png" alt="">
+                            <div class="person-title relative bg-white p-[20px_80px_20px_40px]  rounded-[30px] max-[650px]:p-[20px_70px_20px_40px] ">
+                                <h3 class="text-[#EDDA9F] font-bold text-[16px] leading-[30px]">Иван</h3>
+                                <p class="text-[#404040] font-bold text-[18px] leading-[30px]">Lorem ipsum dolor sit
+                                    amet, consectetur adipiscing elit, sed do </p>
+                                <h6
+                                    class="time absolute right-[25px] bottom-[5px] font-bold text-[16px] leading-[30px] text-[#959595]">
+                                    16:33</h6>
+                            </div>
+                        </div>
+                        <span
+                            class="mx-auto flex items-center max-w-[150px] justify-center font-semibold text-[18px] py-[10px] px-[20px] rounded-[30px] bg-[#E4E4E4]">Вчера</span>
+                        <div class="user-message flex items-end gap-[25px] w-[50%] ml-auto max-[800px]:w-[70%] max-[650px]:w-[90%] max-[500px]:w-full">
+                            <div class="user-title relative bg-white p-[20px_80px_20px_40px] rounded-[30px] max-[650px]:p-[20px_70px_20px_40px]">
+                                <h3 class="text-[#EDDA9F] font-bold text-[16px] leading-[30px]">Иван</h3>
+                                <p class="text-[#404040] font-bold text-[18px] leading-[30px]">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do. Lorem ipsum, dolor
+                                    sit amet consectetur adipisicing elit. Magnam, quas? </p>
+                                <h6
+                                    class="time absolute right-[25px] bottom-[5px] font-bold text-[16px] leading-[30px] text-[#959595]">
+                                    16:33</h6>
+                            </div>
+                            <img src="/image/person-img.png" alt="">
+
+                        </div>
+
+                    
+
+                    </div>
+                    <div class="input-container" id="inputBox">
+                        <textarea id="messageInput" placeholder="написать сообщение"></textarea>
+                        <img src="/image/arrow-r.svg" alt="Отправить">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get("from") === "404") {
+                    document.querySelectorAll('.hide-on-404').forEach(el => el.remove());
+                }
+            });
+        </script>
+        
+
+
+        <script src="/main.js"></script>
+</body>
+
+</html>
