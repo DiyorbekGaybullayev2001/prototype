@@ -46,15 +46,21 @@
                         class="block w-[65%] h-[220px] bg-[#FFFFFF] p-[40px] h-[220px] rounded-[30px] font-bold text-[35px] leading-[47.74px] text-[#404040] flex flex-col items-start justify-between max-[800px]:w-[55%] max-[650px]:w-[55%] max-[650px]:text-[25px] max-[650px]:text-[20px] max-[650px]:leading-[37.74px] max-[600px]:h-[190px]  max-[500px]:text-[18px] max-[500px]:p-[25px]">
                         <h2>Статус вашей подписки</h2>
                     </div>
-                    <div
-                        class="block w-[35%] bg-[#FFFFFF] p-[40px] h-[220px] rounded-[30px] flex flex-col items-start justify-between max-[800px]:w-[45%] max-[650px]:w-[55%] max-[600px]:h-[190px] max-[500px]:p-[25px]">
+                    <div class="block w-[35%] bg-[#FFFFFF] p-[40px] h-[220px] rounded-[30px] flex flex-col items-start justify-between max-[800px]:w-[45%] max-[650px]:w-[55%] max-[600px]:h-[190px] max-[500px]:p-[25px]">
                         <h2
                             class="font-bold text-[35px] leading-[47.74px] text-[#404040] max-[600px]:text-[25px] max-[500px]:text-[20px]">
                             Автоплатеж</h2>
-                        <a href="/pages/sub-management.html" id="auto-payBlock"
-                            class="font-bold text-[16px] leading-[27.28px] text-white bg-[#2B2E3A] rounded-[47px] p-[16px_30px] cursor-pointer">
-                            Отключить
-                        </a>
+                        <div class="flex gap-4 mt-4">
+                            <a href="/pages/sub-management.html" id="auto-payBlock"
+                                class="font-bold text-[16px] leading-[27.28px] text-white bg-[#2B2E3A] rounded-[47px] p-[10px] cursor-pointer">
+                                Отключить
+                            </a>
+                            <!-- 9.1: Кнопка "Управление подпиской" -->
+                            <a href="/pages/sub-management.html"
+                                class="font-bold text-[16px] leading-[27.28px] text-white bg-[#EDDA9F] rounded-[47px] p-[10px] cursor-pointer hover:bg-yellow-300 transition">
+                                Управление подпиской
+                            </a>
+                        </div>
                     </div>
 
 
@@ -200,7 +206,11 @@
                                     class="flex items-center bg-white text-black font-normal rounded-[47px] text-[16px] p-[15px_30px_15px_30px] gap-[10px] max-[600px]:text-[12px] max-[600px]:gap-[4px] max-[600px]:p-[10px_25px] max-[450px]:p-[10px_15px]">Оплатить
                                     подписку <img src="/image/arrow-r.svg" alt=""></a>
                             </div>
-
+                            <div id="active-sub"
+                                class="absolute hidden p-[10px] flex items-center justify-center rounded-[68px] bg-[#EDDA9F] top-[25px] left-[25px]">
+                                <span
+                                    class="bg-white w-[20px] flex h-[20px] rounded-[68px] max-[550px]:w-[10px] max-[550px]:h-[10px]"></span>
+                            </div>
                         </div>
                         <h4 class="mt-[50px] font-bold text-[25px] leading-[34.1px] text-[#404040]">Тариф</h4>
                         <p class="mt-[20px] font-normal text-[16px] leading-[25px]">Lorem ipsum dolor sit amet,

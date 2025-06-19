@@ -9,9 +9,40 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
         rel="stylesheet">
+        <style>
+        .messageInput {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            resize: none;
+            font-size: 16px;
+            line-height: 24px;
+            color: #404040;
+        }
+        .input-container {
+            max-width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            margin: 20px;
+        }
+        .arrow_box{
+            background-color: #EDDA9F;
+            width: 50px;    
+            height: 50px;
+            display: flex;  
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+            
+        }
+    </style>
     <link href="../style.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Поддержка</title>
+    
 </head>
 
 <body class="bg-[#F2F2F2]">
@@ -28,11 +59,18 @@
                 <a href="/pages/profile.html">
                     <img src="/image/avatar.png" alt="" class="max-w-[60px]">
                 </a>
+              
+
             </div>
-        
-            <h2 class="chats-h2 max-[800px]:hidden">Служба поддержки</h2>
+            <h2 class="chats-h2 max-[1000px]:hidden">Служба поддержки</h2>
+            
         
             <div class="flex items-center gap-[25px] hide-on-404">
+                <a href="/pages/main.html"
+                    class=" bg-2B2E3A rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] flex">
+                    <img src="/image/home-icoW.svg" class="w-[25px]" alt="">
+                </a>
+
                 <a href="/pages/chats.html"
                 class="bg-2B2E3A rounded-[48px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[55px] py-[12px] max-[900px]:hidden">
                 Чаты
@@ -41,6 +79,7 @@
                 class="hidden bg-2B2E3A rounded-[68px] font-bold text-[25px] leading-[34.1px] text-center text-white px-[18px] py-[18px] max-[900px]:flex">
                 <img src="/image/message-ico.svg" class="w-[25px]" alt="">
             </a>
+              
             </div>
         </header>
         <main class="flex flex-col w-full flex-1 overflow-hidden ">
@@ -79,9 +118,14 @@
                     
 
                     </div>
-                    <div class="input-container" id="inputBox">
-                        <textarea id="messageInput" placeholder="написать сообщение"></textarea>
-                        <img src="/image/arrow-r.svg" alt="Отправить">
+                    <div class="input-container rounded-[50px] p-[10px] flex text-center items-center bg-white shadow-md  justify-between" id="inputBox">
+                        <div class="w-full">
+                            <textarea id="messageInput" placeholder="написать сообщение" class="w-full border-none outline-none "></textarea>
+                        </div>
+                        <div class="arrow_box bg-amber-400 w-[50px] h-[50px] flex items-center justify-center rounded-full">
+                            <img src="/image/arrow-r.svg" alt="Отправить"  class="w-[25px] h-[25px] flex items-center justify-center rounded-full">
+                            
+                        </div>
                     </div>
                 </div>
             </div>

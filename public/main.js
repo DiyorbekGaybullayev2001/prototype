@@ -563,6 +563,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+//     document.addEventListener("click", (e) => {
+//     const contextMenu = document.getElementById("contextMenu"); // yoki querySelector
+//     const overlay = document.getElementById("overlay"); // ham tekshirish kerak
+
+//     if (contextMenu && !contextMenu.contains(e.target)) {
+//         contextMenu.classList.add("hidden");
+//         overlay?.classList.add("hidden"); // agar overlay ham mavjud bo'lmasa, xato bermaydi
+
+//         if (typeof activeMessage !== "undefined" && activeMessage) {
+//             activeMessage.style.zIndex = "";
+//             activeMessage = null;
+//         }
+//     }
+// });
+
+
     // Начальное состояние
     messagesContainer.innerHTML = "<p class='text-center text-gray-500 text-[28px]'>Выберите чат</p>";
     inputBox.classList.add("hidden");
@@ -1172,6 +1188,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const infoModal = document.querySelector('.info-modal');
+//   if (infoModal) {
+//     // ...modal bilan ishlаш...
+//   }
+// });
 
 
 

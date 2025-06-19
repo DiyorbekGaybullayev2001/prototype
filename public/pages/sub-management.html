@@ -41,30 +41,35 @@
                 </div>
             </header>
             <main>
-                <h2 class="text-white !font-bold text-[50px] mt-[60px] max-[550px]:text-[32px] max-[550px]:mt-[10px]">Управление подпиской</h2>
+                <!-- 10.1: Единый стиль заголовка -->
+                <h2 class="text-white font-bold text-[50px] mt-[60px] max-[550px]:text-[28px] max-[550px]:mt-[10px]">Управление подпиской</h2>
                 <div id="no-linked">
-                    <h4 class="text-white !font-semibold text-[35px] mt-[20px] opacity-[0.8] max-[550px]:text-[28px]">Нет привязанных карт.</h4>
-                    <p class="text-white text-[24px] mt-[10px] opacity-[0.8] max-[550px]:text-[20px]">Добавьте хотя бы одну банковскую карту,
+                    <h4 class="text-white font-semibold text-[28px] mt-[20px] opacity-80 max-[550px]:text-[22px]">Нет привязанных карт.</h4>
+                    <p class="text-white text-[20px] mt-[10px] opacity-80 max-[550px]:text-[16px] mb-5">Добавьте хотя бы одну банковскую карту,
                         чтобы подключить автоплатёж.</p>
+                    <!-- 10.2: Кнопка "Добавить карту" с крестиком и затемнением -->
                     <button id="add-card-btn"
-                        class="mx-left text-black py-[12px] px-[25px] flex justify-between items-center w-[294px] rounded-[47px] font-semibold text-[16px] bg-white-important !mt-[50px]">Добавить
-                        карту <img src="/image/arrow-r.svg" alt=""></button>
+                        class="mx-left text-black py-[12px] px-[25px] flex justify-between items-center w-[294px] rounded-[47px] font-semibold text-[16px] bg-white-important mt-[70px]">
+                        Добавить карту <img src="/image/arrow-r.svg" alt="">
+                    </button>
                 </div>
 
                 <div id="linked" class="flex hidden justify-between items-center w-full max-[600px]:items-end">
                     <div>
-                        <h4 class="text-white font-semibold text-[35px] mt-[20px] opacity-[0.8] max-[550px]:text-[28px]">Подписка активна</h4>
-                        <p class="text-white text-[24px] mt-[10px] opacity-[0.9] max-[550px]:text-[20px]">Действует автоматическое продление
+                        <h4 class="text-white font-semibold text-[28px] mt-[20px] opacity-80 max-[550px]:text-[22px]">Подписка активна</h4>
+                        <p class="text-white text-[20px] mt-[10px] opacity-90 max-[550px]:text-[16px]">Действует автоматическое продление
                             подписки на тариф.</p>
-                        <p class="text-white text-[24px] mt-[10px] opacity-[0.9] max-[550px]:text-[20px]">Следующий автоплатеж будет
+                        <p class="text-white text-[20px] mt-[10px] opacity-90 max-[550px]:text-[16px]">Следующий автоплатеж будет
                             осуществлен: 21.12.2025</p>
                         <div class="flex items-center gap-[25px] mt-[50px] max-[600px]:flex-col max-[600px]:items-start">
                             <button id="add-card-btn"
-                                class="mx-left text-black py-[12px] px-[25px] flex justify-between items-center w-[294px] rounded-[47px] font-semibold text-[20px] bg-white-important max-[600px]:w-[285px]">Сменить
-                                карту<img src="/image/arrow-r.svg" alt=""></button>
+                                class="mx-left text-black py-[12px] px-[25px] flex justify-between items-center w-[294px] rounded-[47px] font-semibold text-[16px] bg-white-important max-[600px]:w-[285px]">
+                                Сменить карту<img src="/image/arrow-r.svg" alt="">
+                            </button>
                             <button id="auto-pay"
-                                class="mx-left text-white border-2 border-solid py-[12px] px-[25px] items-center flex justify-between w-[350px] bg-transparent rounded-[47px] font-semibold text-[20px]  whitespace-nowrap max-[600px]:w-[285px]">Отключить
-                                автоплатеж<img class="invert" src="/image/arrow-r.svg" alt=""></button>
+                                class="mx-left text-white border-2 border-solid py-[12px] px-[25px] items-center flex justify-between w-[350px] bg-transparent rounded-[47px] font-semibold text-[16px] whitespace-nowrap max-[600px]:w-[285px]">
+                                Отключить автоплатеж<img class="invert" src="/image/arrow-r.svg" alt="">
+                            </button>
                         </div>
                     </div>
                     <div class="w-[500px] p-[25px] h-[250px] bg-[#EDDA9F] rounded-[20px] flex flex-col justify-between max-[600px]:hidden">
@@ -77,27 +82,31 @@
                                     <span class="flex w-[15px] h-[15px] bg-[#2B2E3A] rounded-[68px]"></span>
                                     <span class="flex w-[15px] h-[15px] bg-[#2B2E3A] rounded-[68px]"></span>
                                 </div>
-                                <h5 id="card-last4" class="font-normal text-[24px] text-[#2B2E3A]"></h5>
+                                <h5 id="card-last4" class="font-normal text-[20px] text-[#2B2E3A]"></h5>
                             </div>
-                            <h5 id="card-expiryy" class="font-normal text-[24px] text-[#2B2E3A]"></h5>
+                            <h5 id="card-expiryy" class="font-normal text-[20px] text-[#2B2E3A]"></h5>
                         </div>
                     </div>
                 </div>
 
-                <div id="modal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex justify-center items-center">
-                    <div class="bg-white p-6 rounded-lg w-[400px]">
-                        <h3 class="text-[20px] font-semibold mb-4">Добавить карту</h3>
+                <!-- 10.2: Модалка "Добавить карту" с крестиком и затемнением -->
+                <div id="modal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex justify-center items-center z-50">
+                    <div class="bg-white p-6 rounded-lg w-[400px] ">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-[20px] font-semibold">Добавить карту</h3>
+                             <button id="close-modal" class=" text-gray-400 hover:text-black text-3xl p-[10px] font-bold">&times;</button>
+                        </div>
+                       
                         <input id="card-number" type="text" placeholder="Номер карты" maxlength="19"
-                            class="border p-2 w-full mb-2">
+                            class="border border-gray-300 p-2 w-full mb-2 font-normal text-[16px]">
                         <input id="card-expiry" type="text" placeholder="MM/YY" maxlength="5"
-                            class="border p-2 w-full mb-2">
+                            class="border border-gray-300 p-2 w-full mb-2 font-normal text-[16px]">
                         <input id="card-cvc" type="text" placeholder="CVC" maxlength="3"
-                            class="border p-2 w-full mb-2">
+                            class="border border-gray-300 p-2 w-full mb-2 font-normal text-[16px]">
                         <button id="save-card"
-                            class="bg-blue-500 text-white py-2 px-4 rounded w-full">Сохранить</button>
+                            class="bg-blue-500 text-white py-2 px-4 rounded w-full font-semibold text-[16px] ">Сохранить</button>
                     </div>
                 </div>
-
             </main>
             <footer
                 class="footer flex items-center justify-between text-white font-light text-[16px] leading-[27.28px] mb-[50px] max-[650px]:flex-col max-[650px]:items-start mt-[100px] max-[550px]:mb-[20px] max-[550px]:mt-[20px]">
@@ -112,6 +121,18 @@
         </div>
     </div>
     <script type="module" src="/main.js"></script>
+    <script>
+        // 10.2: Открытие/закрытие модалки "Добавить карту"
+        document.querySelectorAll('#add-card-btn').forEach(btn => {
+            btn.onclick = () => document.getElementById('modal').classList.remove('hidden');
+        });
+        document.getElementById('close-modal').onclick = () => {
+            document.getElementById('modal').classList.add('hidden');
+        };
+        document.getElementById('modal').onclick = function(e) {
+            if (e.target === this) this.classList.add('hidden');
+        };
+    </script>
 </body>
 
 
