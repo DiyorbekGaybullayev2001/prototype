@@ -16,7 +16,7 @@
 </head>
 
 <body class="bg-[#F2F2F2]">
-    <div id="contextMenu" class="hidden absolute shadow-lg rounded-[30px] p-[25px] w-[500px] bg-[#2B2E3A]">
+    <div id="contextMenu" class="hidden absolute z-110 shadow-lg rounded-[30px] p-[25px] w-[500px] bg-[#2B2E3A]">
         <ul class="text-[16px] font-bold text-black flex flex-col gap-[25px]">
             <li id="archive-chat"
                 class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
@@ -48,10 +48,10 @@
 
         </ul>
     </div>
-    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
+    <div id="overlay" class="hidden z-100 fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
 
     <div id="contextMenu-2"
-         class="hidden absolute shadow-lg rounded-[30px] p-[25px] w-[975px] bg-[#2B2E3A] z-1001 max-[1100px]:w-[875px] max-[950px]:w-[675px] max-[750px]:w-[550px] max-[600px]:w-[400px] max-[600px]:p-[15px]">
+         class="hidden absolute shadow-lg rounded-[30px] p-[25px] w-[975px] bg-[#2B2E3A] z-1007 max-[1100px]:w-[875px] max-[950px]:w-[675px] max-[750px]:w-[550px] max-[600px]:w-[400px] max-[600px]:p-[15px]">
         <ul
             class="text-[16px] font-bold text-black flex flex-col flex-wrap w-full max-h-[465px] gap-[25px] max-[900px]:max-h-full  max-[900px]:grid max-[900px]:grid-cols-2 max-[600px]:text-[14px] max-[500px]:gap-[15px]">
             <li
@@ -99,7 +99,7 @@
 
         </ul>
     </div>
-    <div id="overlay-2" class="hidden fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
+    <div id="overlay-2" class="hidden fixed z-100 inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
 
     <div
         class=" max-w-7xl mt-0 mx-auto pb-[20px] mt-0 p-[0_15px] h-[100vh] flex flex-col max-[1000px]:overflow-y-hidden max-[1000px]:h-[90vh]">
@@ -310,7 +310,7 @@
                         <textarea id="messageInput"
                                   class="flex-1 max-h-[200px] h-[40px] outline-none font-serif font-bold overflow-y-auto resize-none p-[10px] border rounded-[10px]"
                                   placeholder="Написать сообщение"></textarea>
-                       <button id="sendMessage" class="bg-[#EDDA9F] hover:bg-yellow-400 rounded-full w-[48px] h-[48px] flex items-center justify-center text-black text-xl shadow" aria-label="Отправить">
+                       <button id="sendMessage" class="bg-[#EDDA9F]  rounded-full w-[48px] h-[48px] flex items-center justify-center text-black text-xl shadow" aria-label="Отправить">
         <img src="/image/arrow-r.svg" alt="Отправить" class="w-6 h-6">
     </button>
                     </div>
