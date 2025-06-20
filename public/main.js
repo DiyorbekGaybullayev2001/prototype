@@ -550,18 +550,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // Закрытие контекстного меню при клике вне его
     document.addEventListener("click", (e) => {
-        if (!contextMenu.contains(e.target)) {
-            contextMenu.classList.add("hidden");
-            overlay.classList.add("hidden");
+    // Barcha elementlarni tekshiring
+    if (contextMenu && overlay && !contextMenu.contains(e.target)) {
+        contextMenu.classList.add("hidden");
+        overlay.classList.add("hidden");
 
-            if (activeMessage) {
-                activeMessage.style.zIndex = "";
-                activeMessage = null;
-            }
+        if (activeMessage) {
+            activeMessage.style.zIndex = "";
+            activeMessage = null;
         }
-    });
+    }
+});
 
 //     document.addEventListener("click", (e) => {
 //     const contextMenu = document.getElementById("contextMenu"); // yoki querySelector
@@ -953,7 +953,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.addEventListener("click", function (event) {
             if (!infoElement.contains(event.target) && !infoContent.contains(event.target)) {
-                event.preventDefault();
+                // event.preventDefault();
                 overlay.classList.add("hidden");
                 infoContent.style.visibility = "hidden";
                 infoContent.style.opacity = "0";

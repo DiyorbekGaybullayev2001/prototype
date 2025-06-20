@@ -175,7 +175,7 @@
                     </nav>
                    
                     <h3 id="archive-in"
-                        class="flex items-center cursor-pointer gap-[25px] bg-[#E4E4E4] px-[25px] py-[18px] rounded-[20px]">
+                        class="flex items-center cursor-pointer gap-[25px] bg-[#E4E4E4] px-[25px] py-[10px] rounded-[20px]">
                         <a href="/archive" class="flex items-center gap-[10px]">
                             <img src="/image/archive.svg" alt="">
                             <!-- <img src="/image/archiveW.svg" alt=""> -->
@@ -308,9 +308,11 @@
                     <div class="input-container bg-white p-[10px] flex items-center gap-[10px] rounded-[20px]"
                          id="inputBox">
                         <textarea id="messageInput"
-                                  class="flex-1 max-h-[200px] h-[40px] overflow-y-auto resize-none p-[10px] border rounded-[10px]"
+                                  class="flex-1 max-h-[200px] h-[40px] outline-none font-serif font-bold overflow-y-auto resize-none p-[10px] border rounded-[10px]"
                                   placeholder="Написать сообщение"></textarea>
-                        <img src="/image/arrow-r.svg" alt="Отправить" class="cursor-pointer">
+                       <button id="sendMessage" class="bg-[#EDDA9F] hover:bg-yellow-400 rounded-full w-[48px] h-[48px] flex items-center justify-center text-black text-xl shadow" aria-label="Отправить">
+        <img src="/image/arrow-r.svg" alt="Отправить" class="w-6 h-6">
+    </button>
                     </div>
 
                 </div>
