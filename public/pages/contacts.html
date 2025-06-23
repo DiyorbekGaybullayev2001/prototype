@@ -12,6 +12,12 @@
     <link href="../style.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты</title>
+    <style>
+      #inst-info-modal{
+        background: rgba(255, 255, 255, 0.947);
+        
+      }
+    </style>
   </head>
 
   <body class="bg-[#F2F2F2]">
@@ -150,27 +156,20 @@
                   <div class="flex items-center gap-[10px] max-[700px]:ml-auto">
                     <div class="relative info">
                       <img
-                        class="max-[550px]:w-[45px] z-1000"
+                        class="max-[550px]:w-[45px] z-1000 cursor-pointer"
                         src="/image/info.svg"
                         alt=""
+                        id="open-inst-info"
                       />
-                      <div
-                        class="absolute z-1000 top-[50%] info-content -translate-y-1/2 right-[70px] w-[490px] h-[126px] p-[30px] rounded-[30px] bg-[#2B2E3A] max-[700px]:w-[390px] max-[700px]:h-auto max-[700px]:w-[290px] max-[600px]:w-[250px] max-[400px]:w-[200px]"
-                      >
-                        <p
-                          class="font-semibold text-[16px] leading-[21.82px] text-white max-[600px]:text-[14px]"
-                        >
-                          Организация Meta, а также её продукты Instagram и
-                          Facebook, признаны экстремистскими на территории РФ.
-                        </p>
-                      </div>
+
                     </div>
+
                     <span
                       class="bg-[#EDDA9F] rounded-full w-[60px] h-[60px] flex items-center justify-center max-[700px]:ml-auto max-[550px]:w-[45px] max-[550px]:h-[45px]"
                     >
                       <img
                         class="max-[550px]:w-[20px]"
-                        src="/image/arrow-smaller.svg"
+                        src="../image/arrow-smaller.svg"
                         alt=""
                       />
                     </span>
@@ -287,6 +286,38 @@
 
     <div class="info-modal"></div>
 
+    <!-- Modal oynasi (body oxiriga joylashtiring) -->
+    <div id="inst-info-modal"
+     class="fixed inset-0 z-50 flex items-center justify-center hidden">
+  <div class="flex items-center gap-2">
+    <div class="bg-[#2B2E3A] rounded-[30px] p-[30px] w-[490px] max-[500px]:w-[90vw]">
+      <p class="font-semibold text-[16px] leading-[21.82px] text-white">
+        Организация Meta, а также её продукты Instagram и Facebook, признаны экстремистскими на территории РФ.
+      </p>
+    </div>
+    <button id="close-inst-info"
+      class="ml-8 w-[60px] m-[20px] h-[45px] p-[20px] rounded-full bg-[#2B2E3A] flex items-center justify-center text-white text-2xl font-bold hover:bg-[#232532] transition"
+      aria-label="Закрыть">
+      &#10005;
+    </button>
+  </div>
+</div>
+
     <script src="/main.js"></script>
+    <script>
+  // Открыть модалку
+  document.getElementById('open-inst-info').onclick = function(e) {
+    e.stopPropagation();
+    document.getElementById('inst-info-modal').classList.remove('hidden');
+  };
+  // Закрыть по X
+  document.getElementById('close-inst-info').onclick = function() {
+    document.getElementById('inst-info-modal').classList.add('hidden');
+  };
+  // Закрыть по клику вне окна
+  document.getElementById('inst-info-modal').onclick = function(e) {
+    if (e.target === this) this.classList.add('hidden');
+  };
+</script>
   </body>
 </html>

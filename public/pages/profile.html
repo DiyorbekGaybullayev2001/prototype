@@ -12,6 +12,21 @@
     <link href="../style.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Профиль</title>
+    <style>
+        #closeDeleteModal{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: #000;
+            cursor: pointer;
+        }
+        #logoutBtn, #deleteAccountBtn, .edit{
+            width: 32%;
+        }
+    </style>
 </head>
 
 <body class="bg-[#F2F2F2]">
@@ -129,21 +144,28 @@
                 Редактировать профиль
             </button>
             </div>
-            <div class="flex w-full gap-[30px] max-[650px]:gap-[20px]">
-                <a href="./deleteaccount.html" class="w-[50%]">
+            <div class="flex w-full gap-[20px] flex-wrap  max-[650px]:gap-[20px] ">
+                <a href="#" id="deleteAccountBtn" class="w-[33%]">
                     <div class="bg-white p-5 h-[222px] w-full rounded-[30px] flex flex-col justify-between max-[500px]:h-[192px]">
                         <h3 class="font-semibold text-[25px] leading-[40.92px] text-[#313131] max-[450px]:text-[18px]">Удалить аккаунт</h3>
-                        <p
-                            class="bg-[#EDDA9F] rounded-[65px] ml-auto w-[60px] h-[60px] flex items-center justify-center">
+                        <p class="bg-[#EDDA9F] rounded-[65px] ml-auto w-[60px] h-[60px] flex items-center justify-center">
                             <img src="/image/arrow-smaller.svg" alt="">
                         </p>
                     </div>
                 </a>
-                <a href="./editpassword.html" class="w-[50%]">
+                <a href="./editpassword.html" class="edit w-[33%] ">
                     <div class="bg-white p-5 h-[222px] w-full rounded-[30px] flex flex-col justify-between max-[500px]:h-[192px]">
                         <h3 class="font-semibold text-[25px] leading-[40.92px] text-[#313131] max-[450px]:text-[18px]">Изменить пароль</h3>
-                        <p
-                            class="bg-[#EDDA9F] rounded-[65px] ml-auto w-[60px] h-[60px] flex items-center justify-center">
+                        <p class="bg-[#EDDA9F] rounded-[65px] ml-auto w-[60px] h-[60px] flex items-center justify-center">
+                            <img src="/image/arrow-smaller.svg" alt="">
+                        </p>
+                    </div>
+                </a>
+                <!-- Новая кнопка "Выйти" -->
+                <a href="#" id="logoutBtn" class="w-[30%]">
+                    <div class="bg-white p-5 h-[222px] w-full rounded-[30px] flex flex-col justify-between max-[500px]:h-[192px]">
+                        <h3 class="font-semibold text-[25px] leading-[40.92px] text-[#313131] max-[450px]:text-[18px]">Выйти</h3>
+                        <p class="bg-[#EDDA9F] rounded-[65px] ml-auto w-[60px] h-[60px] flex items-center justify-center">
                             <img src="/image/arrow-smaller.svg" alt="">
                         </p>
                     </div>
@@ -151,7 +173,93 @@
             </div>
         </main>
     </div>
+
+     <!-- Модальное окно для удаления аккаунта -->
+<div id="deleteAccountModal" class="fixed inset-0 z-50 bg-black  bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-[30px]    max-w-[420px] p-[30px] relative shadow-xl flex flex-col items-center">
+        <!-- Крестик -->
+        <button id="closeDeleteModal" class=" text-right float-end text-gray-400 hover:text-black text-4xl font-bold" aria-label="Закрыть">&times;</button>
+        <!-- Текст -->
+        <div id="deleteModalText" class="text-center mb-8 text-[16px] text-[#232532] font-medium leading-[1.5]">
+            При удалении аккаунта все данные будут стерты, восстановить аккаунт после удаления невозможно.<br>
+            Если не согласны, то закройте данное окно.
+        </div>
+        <!-- Кнопка удалить -->
+        <button id="confirmDeleteBtn"
+            class="bg-red-500 hover:bg-red-600 text-black font-bold py-3 px-8 rounded-[20px] text-[18px] transition">
+            Удалить аккаунт
+        </button>
+    </div>
+</div>
+
+<!-- Модальное окно для выхода из системы -->
+<div id="logoutModal" class="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white rounded-[30px] max-w-[420px] p-[30px] relative shadow-xl flex flex-col items-center">
+        <!-- Крестик -->
+        <button id="closeLogoutModal" class="absolute top-4 right-4 text-gray-400 hover:text-black text-4xl font-bold" aria-label="Закрыть">&times;</button>
+        <!-- Текст -->
+        <div class="text-center mb-8 text-[16px] text-[#232532] font-medium leading-[1.5]">
+            Вы уверены, что хотите выйти из системы?
+        </div>
+        <!-- Кнопка выйти -->
+        <button id="confirmLogoutBtn"
+            class="bg-[#2B2E3A] hover:bg-[#232532] text-white font-bold py-3 px-8 rounded-[20px] text-[18px] transition">
+            Выйти из системы
+        </button>
+    </div>
+</div>
+
+<script>
+    // Открытие модального окна
+    document.getElementById('deleteAccountBtn').onclick = function(e) {
+        e.preventDefault();
+        document.getElementById('deleteAccountModal').classList.remove('hidden');
+        document.getElementById('deleteModalText').innerHTML =
+            'При удалении аккаунта все данные будут стерты, восстановить аккаунт после удаления невозможно.<br>Если не согласны, то закройте данное окно.';
+        document.getElementById('confirmDeleteBtn').style.display = 'block';
+    };
+
+    // Закрытие по крестику или клику вне окна
+    document.getElementById('closeDeleteModal').onclick = function() {
+        document.getElementById('deleteAccountModal').classList.add('hidden');
+    };
+    document.getElementById('deleteAccountModal').onclick = function(e) {
+        if (e.target === this) this.classList.add('hidden');
+    };
+
+    // После нажатия "Удалить аккаунт" — меняем текст и скрываем кнопку
+    document.getElementById('confirmDeleteBtn').onclick = function() {
+        document.getElementById('deleteModalText').innerText =
+            'Ваши данные будут удалены после подтверждения';
+        this.style.display = 'none';
+    };
+
+    // Открытие модального окна выхода
+    document.getElementById('logoutBtn').onclick = function(e) {
+        e.preventDefault();
+        document.getElementById('logoutModal').classList.remove('hidden');
+    };
+
+    // Закрытие по крестику или клику вне окна
+    document.getElementById('closeLogoutModal').onclick = function() {
+        document.getElementById('logoutModal').classList.add('hidden');
+    };
+    document.getElementById('logoutModal').onclick = function(e) {
+        if (e.target === this) this.classList.add('hidden');
+    };
+
+    // Выйти из системы — редирект на страницу входа
+    document.getElementById('confirmLogoutBtn').onclick = function() {
+        window.location.href = "/pages/login.html";
+    };
+</script>
+
+
+
+
     <script src="/main.js"></script>
+
+   
 </body>
 
 </html>

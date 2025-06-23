@@ -12,6 +12,16 @@
     <link href="../style.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Вопросы</title>
+    <style>
+        #close-quest-info{
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            font-size: 28px;
+            margin: 5px;
+        }
+        
+    </style>
 </head>
 
 <body class="bg-[#F2F2F2]">
@@ -46,8 +56,12 @@
             </div>
         </header>
         <main class="flex flex-col">
-            <h3 class="flex justify-between items-center font-bold text-[50px] text-black mt-[50px]">Вопросы <img
-                    class="max-w-[50px]" src="/image/quest.svg" alt=""></h3>
+            <h3 class="flex justify-between items-center font-bold text-[50px] text-black mt-[50px]">
+                Вопросы
+                <button id="open-quest-info" class="ml-4">
+                    <img class="max-w-[50px] cursor-pointer" src="/image/quest.svg" alt="?" />
+                </button>
+            </h3>
             <div class="w-full space-y-4 mt-[50px] flex flex-col ">
                 <a href="/pages/questions/topic1.html" class="bg-[#FBFBFB]  rounded-[30px] overflow-hidden">
                     <div class="flex justify-between items-center p-4 cursor-pointer bg-[#FBFBFB] rounded-[25px]" ">
@@ -93,9 +107,38 @@
     </div>
     </main>
 
+    <!-- Модальное окно для значка вопроса -->
+    <div id="quest-info-modal" class="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center hidden">
+        <div class="bg-white rounded-[30px] p-[30px]  w-[600px] relative shadow-xl flex flex-col items-center">
+            <!-- Крестик -->
+            <button id="close-quest-info" class="absolute top-4 right-4 text-gray-400 hover:text-black text-2xl font-bold" aria-label="Закрыть">&times;</button>
+            <!-- Текст -->
+            <div class="text-center text-[16px] text-[#232532] font-medium leading-[1.5]">
+                Здесь вы найдете ответы на самые популярные вопросы.<br>
+                Выберите интересующую тему из списка ниже.<br>
+                Если не нашли ответа — обратитесь в поддержку.<br>
+                Мы всегда готовы помочь!<br>
+                Спасибо, что пользуетесь нашим сервисом.
+            </div>
+        </div>
     </div>
 
     <script src="/main.js"></script>
+    <script>
+        // Открытие модального окна
+        document.getElementById('open-quest-info').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('quest-info-modal').classList.remove('hidden');
+        };
+        // Закрытие по крестику
+        document.getElementById('close-quest-info').onclick = function() {
+            document.getElementById('quest-info-modal').classList.add('hidden');
+        };
+        // Закрытие по клику вне окна
+        document.getElementById('quest-info-modal').onclick = function(e) {
+            if (e.target === this) this.classList.add('hidden');
+        };
+    </script>
 </body>
 
 </html>
