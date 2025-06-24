@@ -1138,8 +1138,18 @@ const infoTexts = document.querySelectorAll(".info-text");
 const infoInputs = document.querySelectorAll(".info-input");
 const editIcons = document.querySelectorAll(".edit-icon");
 const avatarOverlay = document.querySelector(".avatar-overlay");
+const infoLabels = document.querySelectorAll('.info-label'); // Qo'shildi
 
-if (editButtons.length > 0 && profileName && infoItems.length > 0 && infoTexts.length > 0 && infoInputs.length > 0 && editIcons.length > 0 && profileImageInput && avatarOverlay) {
+if (
+    editButtons.length > 0 &&
+    profileName &&
+    infoItems.length > 0 &&
+    infoTexts.length > 0 &&
+    infoInputs.length > 0 &&
+    editIcons.length > 0 &&
+    profileImageInput &&
+    avatarOverlay
+) {
     editButtons.forEach(editButton => {
         editButton.addEventListener("click", () => {
             const isEditing = editButton.innerText === "Редактировать профиль";
@@ -1149,6 +1159,7 @@ if (editButtons.length > 0 && profileName && infoItems.length > 0 && infoTexts.l
             profileName.classList.toggle("border-gray-300", isEditing);
             profileName.classList.toggle("border", isEditing);
             profileName.classList.toggle("rounded-lg", isEditing);
+            
 
             infoItems.forEach((item, index) => {
                 infoTexts[index].classList.toggle("hidden", isEditing);
@@ -1165,6 +1176,11 @@ if (editButtons.length > 0 && profileName && infoItems.length > 0 && infoTexts.l
             editIcons.forEach(icon => icon.classList.toggle("hidden", !isEditing));
             profileImageInput.classList.toggle("hidden", !isEditing);
             avatarOverlay.classList.toggle("hidden", !isEditing);
+
+            // Qo'shimcha: label'larni yashirish/tiklash
+            infoLabels.forEach(label => {
+                label.style.display = isEditing ? "none" : "";
+            });
         });
     });
 }

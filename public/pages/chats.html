@@ -16,7 +16,7 @@
 </head>
 
 <body class="bg-[#F2F2F2]">
-    <div id="contextMenu" class="hidden absolute z-110 shadow-lg rounded-[30px] p-[25px] w-[500px] bg-[#2B2E3A]">
+    <div id="contextMenu" class="hidden absolute top-0 z-110 shadow-lg rounded-[30px] p-[25px] w-[500px] bg-[#2B2E3A] border-l-4 border-[#EDDA9F]">
         <ul class="text-[16px] font-bold text-black flex flex-col gap-[25px]">
             <li id="archive-chat"
                 class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
@@ -26,13 +26,17 @@
                 Закрепить <img class="w-[60px] rounded-[60px]" src="/image/pinW.svg" alt=""></li>
             <li id="toggle-notifications"
                 class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
-                Выключить уведомления <img class="w-[60px] rounded-[60px]" src="/image/ringon.png" alt=""></li>
+                Выключить уведомления <img class="w-[60px] h-[60px] rounded-full" src="../image/u1.svg" alt="">
+            </li>
             <li
                 class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
                 Пометить как непрочитанное <img class="w-[60px] rounded-[60px]" src="/image/messageW.svg" alt=""></li>
             <li
                 class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
                 Очистить историю <img class="w-[60px] rounded-[60px]" src="/image/clearW.svg" alt=""></li>
+            <li id="add-favorite"
+                class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
+                В избранное <img class="w-[60px] rounded-[60px]" src="../image/yesW.svg" alt=""></li>
             <li class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer"
                 id="delete">
                 Удалить <img class="w-[60px] rounded-[60px]" src="/image/trashW.svg" alt=""></li>
@@ -166,6 +170,12 @@
                     <div id="search-container" class="flex items-center border border-[#CECECE] p-[10px] rounded-[100px] w-full">
                         <img src="/image/loop.svg" alt="Поиск" class="mr-2">
                         <input id="search-input" type="text" placeholder="Поиск" class="w-full outline-none bg-transparent">
+                        <!-- Кнопка-крестик для очистки -->
+                        <button id="clear-search" class="ml-2 text-gray-400 hover:text-red-500 focus:outline-none" aria-label="Очистить" style="display:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+    </button>
                     </div>
 
                     <nav id="nav-area" class="flex items-center gap-[20px] mt-[25px] mb-[25px]">
@@ -175,12 +185,9 @@
                     </nav>
                    
                     <h3 id="archive-in"
-                        class="flex items-center cursor-pointer gap-[25px] bg-[#E4E4E4] px-[25px] py-[10px] rounded-[20px]">
-                        <a href="/archive" class="flex items-center gap-[10px]">
-                            <img src="/image/archive.svg" alt="">
-                            <!-- <img src="/image/archiveW.svg" alt=""> -->
-                            <span class="text-[16px] font-bold">В архиве</span>
-                        </a>
+                        class="flex items-center cursor-pointer gap-[25px] bg-[#E4E4E4] px-[25px] py-[10px] rounded-[20px] transition hover:bg-[#d4d4d4]">
+                        <img src="/image/archive.svg" alt="">
+                        <span class="text-[16px] font-bold">В архиве</span>
                     </h3>
                    
 
@@ -299,7 +306,7 @@
                     </div>
                 </div>
                 <div
-                    class="rights flex flex-col flex-1 w-[60%] overflow-hidden min-h-0 relative gap-30px max-[1200px]:w-[50%]">
+                    class="rights flex flex-col flex-1 w-[50%] overflow-hidden min-h-0 relative gap-30px max-[1200px]:w-[45%]">
                     <div id="messages"
                          class="messages flex flex-col flex-1 min-h-0 overflow-y-auto p-[20px] gap-[30px] rounded-[35px]">
 
@@ -307,7 +314,7 @@
                     <div class="input-container bg-white p-[10px] flex items-center gap-[10px] rounded-[20px]"
                          id="inputBox">
                         <textarea id="messageInput"
-                                  class="flex-1 max-h-[200px] h-[40px] outline-none font-serif font-bold overflow-y-auto resize-none p-[10px] border rounded-[10px]"
+                                  class="flex-1 max-h-[200px] h-[40px] outline-none font-serif font-bold overflow-y-auto resize-none p-[10px] border-none rounded-[10px]"
                                   placeholder="Написать сообщение"></textarea>
                        <button id="sendMessage" class="bg-[#EDDA9F]  rounded-full w-[48px] h-[48px] flex items-center justify-center text-black text-xl shadow" aria-label="Отправить">
         <img src="/image/arrow-r.svg" alt="Отправить" class="w-6 h-6">
@@ -329,6 +336,129 @@
         <!-- <a href="/archive" class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300">Archive</a> -->
     </div>
     <script src="/main.js"></script>
+    <script>
+    // Qidiruv oynasida "tozalash" tugmasi
+    const searchInput = document.getElementById('search-input');
+    const clearBtn = document.getElementById('clear-search');
+    searchInput.addEventListener('input', function() {
+        clearBtn.style.display = this.value.length ? 'block' : 'none';
+    });
+    clearBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        searchInput.dispatchEvent(new Event('input'));
+        searchInput.focus();
+    });
+
+    // --- CHAT KONTEXT MENYUSI LOGIKASI ---
+    let selectedChat = null;
+
+    // Chat-item'ga o'ng tugma bosilganda menyuni ochish va chatni tanlash
+    document.querySelectorAll('.chat-item').forEach(item => {
+        item.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            selectedChat = this;
+            const menu = document.getElementById('contextMenu');
+            menu.classList.remove('hidden');
+
+            // Menyuni ekranda markazga yaqin chiqarish
+            const menuHeight = menu.offsetHeight || 400;
+            const menuWidth = menu.offsetWidth || 500;
+            const viewportHeight = window.innerHeight;
+            const viewportWidth = window.innerWidth;
+            let top = e.clientY - menuHeight / 2;
+            let left = e.clientX - menuWidth / 2;
+            if (top < 30) top = 30;
+            if (top + menuHeight > viewportHeight - 30) top = viewportHeight - menuHeight - 30;
+            if (left < 30) left = 30;
+            if (left + menuWidth > viewportWidth - 30) left = viewportWidth - menuWidth - 30;
+            menu.style.top = `${top + window.scrollY}px`;
+            menu.style.left = `${left + window.scrollX}px`;
+        });
+        // Chat-container bosilganda message ochish
+        item.addEventListener('click', function() {
+            showMessageInRights({
+                title: this.querySelector('.message-title h4')?.innerText || 'Чат',
+                description: this.querySelector('.message-title p')?.innerText || '',
+                date: this.querySelector('.message-info p')?.innerText || '',
+                count: this.querySelector('.message-info span')?.innerText || '',
+            });
+        });
+    });
+
+    // Arxiv bosilganda message ochish
+    document.getElementById('archive-in').onclick = function () {
+        showMessageInRights({
+            title: 'Архив чатов',
+            description: 'Здесь будут отображаться ваши архивированные чаты.',
+            date: '',
+            count: '',
+        });
+    };
+
+    // Message'ni rights ichida ko‘rsatish funksiyasi
+    function showMessageInRights({title, description, date, count}) {
+        const messagesBlock = document.getElementById('messages');
+        messagesBlock.innerHTML = `
+            <div class="bg-white rounded-[25px] p-[30px] shadow flex flex-col gap-4">
+                <h3 class="font-bold text-[22px] text-[#2B2E3A]">${title}</h3>
+                <p class="text-[16px] text-[#454545]">${description}</p>
+                ${date ? `<div class="text-[14px] text-gray-400">${date}</div>` : ''}
+                ${count ? `<div class="text-[14px] text-gray-600">Сообщений: ${count}</div>` : ''}
+            </div>
+        `;
+    }
+
+    // Menyuni tashqariga bosganda yopish
+    document.addEventListener('click', function(e) {
+        const menu = document.getElementById('contextMenu');
+        if (!menu.contains(e.target)) {
+            menu.classList.add('hidden');
+        }
+    });
+
+    // --- ZAKREPLENIE VA UYQUTIRISH BELGILARI ---
+    // "Закрепить" tugmasi
+    document.querySelectorAll('#contextMenu .menu-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const menu = document.getElementById('contextMenu');
+            menu.classList.add('hidden');
+        });
+    });
+
+    document.querySelector('#contextMenu li:nth-child(2)').addEventListener('click', function() {
+        if (selectedChat) {
+            const pinIcon = selectedChat.querySelector('.message-info img[alt="pin"]');
+            if (pinIcon) {
+                // Agar bor bo'lsa, olib tashlash
+                if (!pinIcon.classList.contains('active-pin')) {
+                    pinIcon.classList.add('active-pin');
+                    pinIcon.src = "/image/pinW.svg"; // O'zgargan rangli ikonka
+                } else {
+                    pinIcon.classList.remove('active-pin');
+                    pinIcon.src = "/image/pin.svg";
+                }
+            }
+        }
+    });
+
+    // "Выключить уведомления" tugmasi
+    document.querySelector('#contextMenu li#toggle-notifications').addEventListener('click', function() {
+        if (selectedChat) {
+            let notifIcon = selectedChat.querySelector('.message-info img[alt="ring"]');
+            if (!notifIcon) {
+                // Agar hali yo'q bo'lsa, yangi qo'shamiz
+                notifIcon = document.createElement('img');
+                notifIcon.src = "../image/u1.svg"; // O'zgargan rangli ikonka
+                notifIcon.alt = "ring";
+                notifIcon.className = "ml-2 w-[44px] h-[44px]";
+                selectedChat.querySelector('.message-info').appendChild(notifIcon);
+            } else {
+                // Bor bo'lsa, olib tashlash
+                notifIcon.remove();
+            }
+        }
+    });
+</script>
 </body>
 
 </html>
