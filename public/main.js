@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 cards.classList.remove('cards-vert');
                 cardElements.forEach((card, index) => {
                     card.classList.remove('card-full');
-                    card.style.backgroundImage = `url(/project-${index + 1}.png)`;
+                    card.style.backgroundImage = `url(../../image/project-${index + 1}.png)`;
                     const paragraphs = card.querySelectorAll('p');
                     if (paragraphs.length > 2) {
                         paragraphs[2].classList.remove('hidden');
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 cards.classList.add('cards-vert');
                 cardElements.forEach((card, index) => {
                     card.classList.add('card-full');
-                    card.style.backgroundImage = `url(/project-${index + 1}-full.png)`;
+                    card.style.backgroundImage = `url(../../image/project-${index + 1}-full.png)`;
                     const paragraphs = card.querySelectorAll('p');
                     if (paragraphs.length > 2) {
                         paragraphs[2].classList.add('hidden');
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 cards.classList.remove('cards-vert');
                 cardElements.forEach((card, index) => {
                     card.classList.remove('card-full');
-                    card.style.backgroundImage = `url(/project-${index + 1}.png)`;
+                    card.style.backgroundImage = `url(../../image/project-${index + 1}.png)`;
                     const paragraphs = card.querySelectorAll('p');
                     if (paragraphs.length > 2) {
                         paragraphs[2].classList.remove('hidden');
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 cards.classList.add('cards-vert');
                 cardElements.forEach((card, index) => {
                     card.classList.add('card-full');
-                    card.style.backgroundImage = `url(/project-${index + 1}-full.png)`;
+                    card.style.backgroundImage = `url(../../image/project-${index + 1}-full.png)`;
                     const paragraphs = card.querySelectorAll('p');
                     if (paragraphs.length > 2) {
                         paragraphs[2].classList.add('hidden');
