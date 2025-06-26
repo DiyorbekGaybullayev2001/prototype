@@ -26,6 +26,10 @@
         #logoutBtn, #deleteAccountBtn, .edit{
             width: 32%;
         }
+        #confirmDeleteBtn{
+            background-color: #EDDA9F;
+            
+        }
     </style>
 </head>
 
@@ -232,6 +236,32 @@
         document.getElementById('deleteModalText').innerText =
             'Ваши данные будут удалены после подтверждения';
         this.style.display = 'none';
+
+        // "OK" tugmasini yaratamiz (agar hali yo'q bo'lsa)
+        if (!document.getElementById('okAfterDeleteBtn')) {
+            let okBtn = document.createElement('button');
+            okBtn.innerText = 'OK';
+            okBtn.id = 'okAfterDeleteBtn';
+            okBtn.className = 'bg-[#EDDA9F] hover:bg-yellow-300 text-black font-bold py-3 px-8 rounded-[20px] text-[18px] mt-6 transition';
+            okBtn.onclick = function() {
+                window.location.href = "/pages/login.html";
+            };
+            document.querySelector('#deleteAccountModal .bg-white').appendChild(okBtn);
+        }
+    };
+
+    // "X" tugmasi yoki modal fonini bosganda OK tugmasini ham olib tashlash
+    document.getElementById('closeDeleteModal').onclick = function() {
+        document.getElementById('deleteAccountModal').classList.add('hidden');
+        const okBtn = document.getElementById('okAfterDeleteBtn');
+        if (okBtn) okBtn.remove();
+    };
+    document.getElementById('deleteAccountModal').onclick = function(e) {
+        if (e.target === this) {
+            this.classList.add('hidden');
+            const okBtn = document.getElementById('okAfterDeleteBtn');
+            if (okBtn) okBtn.remove();
+        }
     };
 
     // Открытие модального окна выхода

@@ -13,11 +13,30 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Управление подпиской</title>
+    <style>
+        .wrapper {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        h2{
+            font-size: 60px !important;
+            font-weight: 700 !important;
+        }
+        h4{
+            font-size: 35px !important;
+        }
+        p{
+            font-size: 24px !important;
+        }
+        #modal {
+            background-color: #000000d7;
+
+        }
+    </style>
 </head>
 
 <body>
     <div class="wrapper bg-[#2B2E3A]">
-        <div class="container max-w-7xl mt-0 mx-auto flex flex-col justify-between h-screen p-[0_15px]">
+        <div class="container max-w-7xl mt-0 mx-auto  columns-3 justify-between h-screen p-[0_15px]">
             <header class="flex justify-between mt-[66px] max-[550px]:mt-[30px]">
                 <div class="header__left flex items-center gap-[25px]">
                     <button
@@ -40,20 +59,20 @@
                     </a>
                 </div>
             </header>
-            <main>
+            <main class="mt-[50px]">
                 <!-- Единый стиль заголовка -->
-                <h2 class="text-white font-serif font-semibold text-[25px] mt-[20px] opacity-90 max-[550px]:text-[16px] ">
+                <h2 class="text-white  text-[60px] mt-0-im opacity-90 max-[550px]:text-[16px] ">
                     Управление подпиской
                 </h2>
                 <div id="no-linked">
-                    <h4 class="text-white font-serif font-semibold text-[25px] mt-[20px] opacity-90 max-[550px]:text-[16px]">Нет привязанных карт.</h4>
-                    <p class="text-white font-serif font-semibold text-[25px] mt-[20px] opacity-90 max-[550px]:text-[16px]">
+                    <h4 class="text-white  mt-[20px] opacity-90 max-[550px]:text-[16px]">Нет привязанных карт.</h4>
+                    <p class="text-white  mt-[20px] opacity-90 max-[550px]:text-[16px]">
                         Добавьте хотя бы одну банковскую карту, чтобы подключить автоплатёж.
                     </p>
                     <br>
                     <button id="add-card-btn"
                         class="mx-left text-black mt-[40px] py-[12px] px-[25px] flex justify-between items-center w-[220px] rounded-[47px] font-semibold text-[16px] bg-white-important ">
-                        Добавить карту <img src="/image/arrow-r.svg" alt="">
+                        Добавить карту  <img src="/image/arrow-r.svg" alt="">
                     </button>
                 </div>
 
@@ -92,8 +111,10 @@
                     </div>
                 </div>
 
-                <!-- Модалка "Добавить карту" -->
-                <div id="modal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex justify-center items-center z-50">
+               
+            </main>
+             <!-- Модалка "Добавить карту" -->
+                <div id="modal" class="fixed inset-0 hidden   w-full h-[100vh] flex justify-center items-center z-1000">
                     <div class="bg-white p-6 rounded-lg w-[350px] ">
                         <div class="flex items-center justify-between mb-4">
                             <h3 class="text-[18px] font-semibold">Добавить карту</h3>
@@ -109,9 +130,8 @@
                             class="bg-blue-500 text-white py-2 px-4 rounded w-full font-semibold text-[16px]">Сохранить</button>
                     </div>
                 </div>
-            </main>
             <footer
-                class="footer flex items-center justify-between text-white font-light text-[16px] leading-[27.28px] mb-[50px] max-[650px]:flex-col max-[650px]:items-start mt-[100px] max-[550px]:mb-[20px] max-[550px]:mt-[20px]">
+                class="footer mt-[100px] flex items-center justify-between text-white font-light text-[16px] leading-[27.28px] mb-[50px] max-[650px]:flex-col max-[650px]:items-start  max-[550px]:mb-[20px] max-[550px]:mt-[20px]">
                 <div class="f-left flex flex-col items-start">
                     Все права защищены. <br> © 2025 ИП Распутин Иван Николаевич
                 </div>
