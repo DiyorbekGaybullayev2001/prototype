@@ -312,6 +312,36 @@
     //         showLabelsAgain();
     //     }
     // });
+
+// Har bir .edit-icon (karandash) va info-text uchun bir xil tahrirlash logikasi
+document.querySelectorAll('.info-item').forEach((item, idx) => {
+    const editIcon = item.querySelector('.edit-icon');
+    const infoText = item.querySelector('.info-text');
+    const infoInput = item.querySelector('.info-input');
+
+    // Karandashga bosganda input ochiladi va fokuslanadi
+    if (editIcon && infoInput && infoText) {
+        editIcon.addEventListener('click', function (e) {
+            e.stopPropagation();
+            infoText.classList.add('hidden');
+            infoInput.classList.remove('hidden');
+            infoInput.disabled = false;
+            infoInput.focus();
+        });
+    }
+
+    // InfoText'ga bosganda ham input ochiladi va fokuslanadi
+    if (infoText && infoInput) {
+        infoText.addEventListener('click', function (e) {
+            e.stopPropagation();
+            infoText.classList.add('hidden');
+            infoInput.classList.remove('hidden');
+            infoInput.disabled = false;
+            infoInput.focus();
+        });
+    }
+});
+
 </script>
 
 

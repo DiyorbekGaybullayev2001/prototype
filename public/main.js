@@ -526,7 +526,7 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
 
             if (selectMode && this.classList.contains("active")) {
-                this.style.zIndex = "1001";
+                this.style.zIndex = "1001" ;
             }
 
             if (activeMessage) {
