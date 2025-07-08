@@ -449,8 +449,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const chatData = {
         0: `
-            <span class="mx-auto relative flex items-center max-w-[150px] justify-center font-semibold text-[18px] py-[10px] px-[20px] rounded-[30px] bg-[#E4E4E4]">25.11.2024</span>
-            <div class="person-message flex items-center gap-[25px]">
+            <span class="mx-auto relative transform scale-[0.93] flex items-center max-w-[150px] justify-center font-semibold text-[18px] py-[10px] px-[20px] rounded-[30px] bg-[#E4E4E4]">25.11.2024</span>
+            <div class="person-message transform scale-[0.93] flex items-center gap-[25px]">
                 <img src="/image/avatar.png" alt="">
                 <div class="person-title relative bg-white p-[20px_80px_20px_40px] rounded-[30px]">
                     <h3 class="text-[#EDDA9F] font-bold text-[20px] leading-[30px]">Иван</h3>
@@ -462,10 +462,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     </h6>
                 </div>
             </div>
-            <span class="mx-auto flex items-center max-w-[150px] justify-center font-semibold text-[18px] py-[10px] px-[20px] rounded-[30px] bg-[#E4E4E4]">
+            <span class="mx-auto transform scale-[0.93] flex items-center max-w-[150px] justify-center font-semibold text-[18px] py-[10px] px-[20px] rounded-[30px] bg-[#E4E4E4]">
                 Вчера
             </span>
-            <div class="user-message flex items-end gap-[25px]">
+            <div class="user-message transform scale-[0.93] flex items-end gap-[25px]">
                 <div class="user-title relative bg-white p-[20px_80px_20px_40px] rounded-[30px]">
                     <h3 class="text-[#EDDA9F] font-bold text-[20px] leading-[30px]">Иван</h3>
                     <p class="text-[#404040] font-bold text-[16px] leading-[30px]">
@@ -477,7 +477,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <img src="/image/person-img.png" alt="">
             </div>
-            <div class="tips flex flex-col gap-[15px]">
+            <div class="tips flex flex-col gap-[15px] transform scale-[0.93]">
                 <div class="tips-message cursor-pointer flex justify-end rounded-[30px] w-fit p-[10px_35px_10px_35px] bg-[#2B2E3A] text-white font-bold text-[18px] leading-[30px] text-align-right ml-auto">
                     Привет
                 </div>
