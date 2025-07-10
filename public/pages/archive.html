@@ -60,7 +60,7 @@
                 Закрепить <img class="w-[60px] rounded-[60px]" src="/image/pinW.svg" alt=""></li>
             <li id="toggle-notifications"
                 class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
-                Выключить уведомления <img class="w-[60px] h-[60px] rounded-full" src="../image/u1.svg" alt="">
+                Выключить уведомления <img class="w-[60px] h-[60px] rounded-full" src="../image/bell2.svg" alt="">
             </li>
             <li
                 class="menu-item py-[13px] pl-[25px] pr-[13px] bg-white rounded-[20px] flex justify-between items-center cursor-pointer">
@@ -174,7 +174,7 @@
         </header>
 
         <main class=" flex flex-col w-full flex-1 overflow-hidden">
-            <div class=" flex flex-1  gap-[30px] mt-[30px] min-h-0 max-[1000px]:gap-0">
+            <div class=" flex flex-1  gap-[1px] mt-[30px] min-h-0 max-[1000px]:gap-0">
                 <div id="archive-inner"
                      class="archive-inner hidden bg-[#E4E4E4] p-[20px] w-[40%] rounded-[35px] h-full">
                     <nav class="flex items-center gap-[13px] mb-[25px]">
@@ -202,7 +202,7 @@
                 </div>
                 <div id="left"
                 
-                     class="flex flex-col w-[37%] bg-[#E4E4E4] p-[20px] rounded-[35px] overflow-hidden min-h-0   max-[550px]:p-[15px_10px] ">
+                     class="flex flex-col w-[42%] bg-[#E4E4E4] p-[20px] rounded-[35px] overflow-hidden min-h-0   max-[550px]:p-[15px_10px] ">
                     <div id="search-container" class="flex items-center border border-[#CECECE] p-[10px] rounded-[100px] w-full">
                         <img src="/image/loop.svg" alt="Поиск" class="mr-2" width="30">
                         <input id="search-input" type="text" placeholder="Поиск" class="w-full outline-none bg-transparent text-lg">
@@ -229,120 +229,134 @@
                     </a> -->
                    
 
-                    <div id="chat-list" class="chats flex flex-col flex-1 min-h-0 gap-[10px] overflow-y-auto mt-[20px] p-[12px]">
+                    <div id="chat-list" class="chats flex flex-col flex-1 min-h-0 gap-[10px] overflow-y-auto  p-[12px]">
                         <div class="chat-container">
 
                             <div
                                 class="message select bg-[#E4E4E4] relative cursor-pointer flex items-start justify-between p-[10px] rounded-[30px] pin chat-item">
-                                <div class="flex items-start gap-[20px] max-[500px]:gap-[15px]">
+                                <div class="flex items-start gap-[10px] max-[500px]:gap-[10px]">
                                     <div id="select-dot"
                                          class="hidden flex justify-center my-auto w-[28px] h-[28px] rounded-[68px] bg-transparent border border-black items-center">
                                         <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
                                     </div>
-                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
+                                    <img class="w-[60px] rounded-[20px] h-[60px] " src="/image/chat-img.png" alt="" >
                                     <div class="message-title">
                                         <h4 class="font-bold text-[18px]">Наименование</h4>
                                         <p class="font-normal text-[16px]">Описание</p>
                                     </div>
                                 </div>
-                                <div class="message-info flex flex-col items-end gap-[8px]">
-                                    <p class="font-bold text-[16px]">25.11.2024</p>
+                                <div class="message-info w-full flex flex-col items-end gap-[8px] pt-[2px]">
+                                    <p class="font-bold text-[14px] mr-1">25.11.2024</p>
                                     <div class="message-meta flex items-center gap-[10px]">
-                                        <img src="/image/pin.svg" alt="">
+                                        <!-- <img class="h-[20px]" src="/image/pin.svg" alt=""> -->
                                         <span
-                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
+                                        class="bg-[#A0ED9F] py-[3px] px-[8px] rounded-[30px] text-black font-bold text-[12px]">1</span>
 
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="chat-container">
+
                             <div
-                                class="message relative bg-[#E4E4E4] cursor-pointer flex items-start justify-between p-[10px] rounded-[30px] pin chat-item">
-                                <div class="flex items-start gap-[20px]">
+                                class="message select bg-[#E4E4E4] relative cursor-pointer flex items-start justify-between p-[10px] rounded-[30px] pin chat-item">
+                                <div class="flex items-start gap-[10px] max-[500px]:gap-[10px]">
                                     <div id="select-dot"
                                          class="hidden flex justify-center my-auto w-[28px] h-[28px] rounded-[68px] bg-transparent border border-black items-center">
                                         <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
                                     </div>
-                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
+                                    <img class="w-[60px] rounded-[20px] h-[60px] " src="/image/chat-img.png" alt="" >
                                     <div class="message-title">
                                         <h4 class="font-bold text-[18px]">Наименование</h4>
                                         <p class="font-normal text-[16px]">Описание</p>
                                     </div>
                                 </div>
-                                <div class="message-info flex flex-col items-end gap-[8px]">
-                                    <p class="font-bold text-[16px]">25.11.2024</p>
+                                <div class="message-info w-full flex flex-col items-end gap-[8px] pt-[2px]">
+                                    <p class="font-bold text-[14px] mr-1">25.11.2024</p>
                                     <div class="message-meta flex items-center gap-[10px]">
-                                        <img src="/image/pin.svg" alt="">
+                                        <!-- <img class="h-[20px]" src="/image/pin.svg" alt=""> -->
                                         <span
-                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
+                                        class="bg-[#A0ED9F] py-[3px] px-[8px] rounded-[30px] text-black font-bold text-[12px]">1</span>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="chat-container">
+
                             <div
-                                class="message relative bg-[#E4E4E4] cursor-pointer flex items-start justify-between p-[10px] rounded-[30px] chat-item">
-                                <div class="flex items-start gap-[20px]">
+                                class="message select bg-[#E4E4E4] relative cursor-pointer flex items-start justify-between p-[10px] rounded-[30px] pin chat-item">
+                                <div class="flex items-start gap-[10px] max-[500px]:gap-[10px]">
                                     <div id="select-dot"
                                          class="hidden flex justify-center my-auto w-[28px] h-[28px] rounded-[68px] bg-transparent border border-black items-center">
                                         <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
                                     </div>
-                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
+                                    <img class="w-[60px] rounded-[20px] h-[60px] " src="/image/chat-img.png" alt="" >
                                     <div class="message-title">
                                         <h4 class="font-bold text-[18px]">Наименование</h4>
                                         <p class="font-normal text-[16px]">Описание</p>
                                     </div>
                                 </div>
-                                <div class="message-info flex flex-col items-end gap-[8px]">
-                                    <p class="font-bold text-[16px]">25.11.2024</p>
-                                    <span
-                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
-                                    <img src="/image/pin.svg" alt="">
+                                <div class="message-info w-full flex flex-col items-end gap-[8px] pt-[2px]">
+                                    <p class="font-bold text-[14px] mr-1">25.11.2024</p>
+                                    <div class="message-meta flex items-center gap-[10px]">
+                                        <!-- <img class="h-[20px]" src="/image/pin.svg" alt=""> -->
+                                        <span
+                                        class="bg-[#A0ED9F] py-[3px] px-[8px] rounded-[30px] text-black font-bold text-[12px]">1</span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       <div class="chat-container">
+
+                            <div
+                                class="message select bg-[#E4E4E4] relative cursor-pointer flex items-start justify-between p-[10px] rounded-[30px] pin chat-item">
+                                <div class="flex items-start gap-[10px] max-[500px]:gap-[10px]">
+                                    <div id="select-dot"
+                                         class="hidden flex justify-center my-auto w-[28px] h-[28px] rounded-[68px] bg-transparent border border-black items-center">
+                                        <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
+                                    </div>
+                                    <img class="w-[60px] rounded-[20px] h-[60px] " src="/image/chat-img.png" alt="" >
+                                    <div class="message-title">
+                                        <h4 class="font-bold text-[18px]">Наименование</h4>
+                                        <p class="font-normal text-[16px]">Описание</p>
+                                    </div>
+                                </div>
+                                <div class="message-info w-full flex flex-col items-end gap-[8px] pt-[2px]">
+                                    <p class="font-bold text-[14px] mr-1">25.11.2024</p>
+                                    <div class="message-meta flex items-center gap-[10px]">
+                                        <!-- <img class="h-[20px]" src="/image/pin.svg" alt=""> -->
+                                        <span
+                                        class="bg-[#A0ED9F] py-[3px] px-[8px] rounded-[30px] text-black font-bold text-[12px]">1</span>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="chat-container">
+
                             <div
-                                class="message relative bg-[#E4E4E4] cursor-pointer flex items-start justify-between p-[10px] rounded-[30px] chat-item">
-                                <div class="flex items-start gap-[20px]">
+                                class="message select bg-[#E4E4E4] relative cursor-pointer flex items-start justify-between p-[10px] rounded-[30px] pin chat-item">
+                                <div class="flex items-start gap-[10px] max-[500px]:gap-[10px]">
                                     <div id="select-dot"
                                          class="hidden flex justify-center my-auto w-[28px] h-[28px] rounded-[68px] bg-transparent border border-black items-center">
                                         <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
                                     </div>
-                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
+                                    <img class="w-[60px] rounded-[20px] h-[60px] " src="/image/chat-img.png" alt="" >
                                     <div class="message-title">
                                         <h4 class="font-bold text-[18px]">Наименование</h4>
                                         <p class="font-normal text-[16px]">Описание</p>
                                     </div>
                                 </div>
-                                <div class="message-info flex flex-col items-end gap-[8px]">
-                                    <p class="font-bold text-[16px]">25.11.2024</p>
-                                    <span
-                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
-                                    <img src="/image/pin.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="chat-container">
-                            <div
-                                class="message relative bg-[#E4E4E4] cursor-pointer flex items-start justify-between p-[10px] rounded-[30px] chat-item">
-                                <div class="flex items-start gap-[20px]">
-                                    <div id="select-dot"
-                                         class="hidden flex justify-center my-auto w-[28px] h-[28px] rounded-[68px] bg-transparent border border-black items-center">
-                                        <img id="dot-image" class="hidden max-w-[12.5px]" src="/image/choose.svg" alt="">
+                                <div class="message-info w-full flex flex-col items-end gap-[8px] pt-[2px]">
+                                    <p class="font-bold text-[14px] mr-1">25.11.2024</p>
+                                    <div class="message-meta flex items-center gap-[10px]">
+                                        <!-- <img class="h-[20px]" src="/image/pin.svg" alt=""> -->
+                                        <span
+                                        class="bg-[#A0ED9F] py-[3px] px-[8px] rounded-[30px] text-black font-bold text-[12px]">1</span>
+
                                     </div>
-                                    <img class="max-w-[100px] rounded-[30px]" src="/image/chat-img.png" alt="">
-                                    <div class="message-title">
-                                        <h4 class="font-bold text-[18px]">Наименование</h4>
-                                        <p class="font-normal text-[16px]">Описание</p>
-                                    </div>
-                                </div>
-                                <div class="message-info flex flex-col items-end gap-[8px]">
-                                    <p class="font-bold text-[16px]">25.11.2024</p>
-                                    <span
-                                        class="bg-[#A0ED9F] py-[6px] px-[12px] rounded-[30px] text-black font-bold text-[14px]">1</span>
-                                    <img src="/image/pin.svg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -415,205 +429,241 @@ scaleLeftElements();
 
 
 
-// ...existing code...
+    // #rights va ichidagi barcha elementlarni 20% ga kichraytirish (JS orqali style o‘zgartirish)
+    function scaleRightsElements() {
+        const rights = document.querySelector('.rights');
+        if (!rights) return;
 
-// #rights va ichidagi barcha elementlarni 20% ga kichraytirish (JS orqali style o‘zgartirish)
-function scaleRightsElements() {
-    const rights = document.querySelector('.rights');
-    if (!rights) return;
+        // rights konteynerining o‘zini ham scale qilamiz
+        rights.style.transform = 'scale(0.98)';
+        // rights.style.transformOrigin = 'top left';
 
-    // rights konteynerining o‘zini ham scale qilamiz
-    rights.style.transform = 'scale(0.98)';
-    // rights.style.transformOrigin = 'top left';
-
-    // Faqat child elementlarni tanlab, har biriga style beramiz
-    rights.querySelectorAll('*').forEach(el => {
-        // Font size
-        if (el.style.fontSize) {
-            el.style.fontSize = (parseFloat(el.style.fontSize) * 0.8) + (el.style.fontSize.replace(/[0-9.]/g, ''));
-        }
-        // Padding
-        if (el.style.padding) {
-            el.style.padding = (parseFloat(el.style.padding) * 0.8) + (el.style.padding.replace(/[0-9.]/g, ''));
-        }
-        // Margin
-        if (el.style.margin) {
-            el.style.margin = (parseFloat(el.style.margin) * 0.8) + (el.style.margin.replace(/[0-9.]/g, ''));
-        }
-        // Rasm va svg uchun ham width/height
-        if (el.tagName === 'IMG' || el.tagName === 'SVG') {
-            if (el.width) el.width = el.width * 0.8;
-            if (el.height) el.height = el.height * 0.8;
-            if (el.style.maxWidth) {
-                el.style.maxWidth = (parseFloat(el.style.maxWidth) * 0.8) + (el.style.maxWidth.replace(/[0-9.]/g, ''));
+        // Faqat child elementlarni tanlab, har biriga style beramiz
+        rights.querySelectorAll('*').forEach(el => {
+            // Font size
+            if (el.style.fontSize) {
+                el.style.fontSize = (parseFloat(el.style.fontSize) * 0.8) + (el.style.fontSize.replace(/[0-9.]/g, ''));
             }
-            if (el.style.maxHeight) {
-                el.style.maxHeight = (parseFloat(el.style.maxHeight) * 0.8) + (el.style.maxHeight.replace(/[0-9.]/g, ''));
+            // Padding
+            if (el.style.padding) {
+                el.style.padding = (parseFloat(el.style.padding) * 0.8) + (el.style.padding.replace(/[0-9.]/g, ''));
             }
-        }
-    });
-}
-
-// Sahifa yuklanganda yoki kerakli vaqtda chaqiring:
-scaleRightsElements();
-
-// ...existing code...
-
-
-// ...existing code...
-// ...existing code...
-
-// Har bir chat uchun pin va bell holatini saqlash uchun massiv
-const chatStates = new Map();
-
-// Chat-item'ga o'ng tugma bosilganda selectedChat ni saqlash va id olish
-document.querySelectorAll('.chat-item').forEach((item, idx) => {
-    item.dataset.chatId = idx; // har bir chatga id biriktiramiz
-    item.addEventListener('contextmenu', function(e) {
-        selectedChat = this;
-    });
-    // Har bir chat yuklanganda holatini tiklash
-    updateChatIcons(item);
-});
-
-// Universal funksiya: chatga pin/bell ikonkasini qo'yish yoki olib tashlash
-function updateChatIcons(chat) {
-    const messageInfo = chat.querySelector('.message-meta');
-    if (!messageInfo) return;
-    // Pin
-    let pinImg = messageInfo.querySelector('img[alt="pin"]');
-    if (pinImg) pinImg.remove();
-    if (chatStates.get(chat.dataset.chatId)?.pin) {
-        const newPin = document.createElement('img');
-        newPin.src = '/image/pinW.svg';
-        newPin.alt = 'pin';
-        newPin.style.width = '40px';
-        // newPin.style.marginLeft = '6px';
-        messageInfo.appendChild(newPin);
-    }
-    // Bell
-    let bellImg = messageInfo.querySelector('img[alt="bell"]');
-    if (bellImg) bellImg.remove();
-    if (chatStates.get(chat.dataset.chatId)?.bell) {
-        const newBell = document.createElement('img');
-        newBell.src = '../image/u1.svg';
-        newBell.alt = 'bell';
-        newBell.style.width = '40px';
-        // newBell.style.marginLeft = '6px';
-        messageInfo.appendChild(newBell);
-    }
-}
-
-// "Закрепить" tugmasi bosilganda faqat tanlangan chat uchun emas, holatni massivda saqlaymiz
-document.querySelectorAll('#contextMenu .menu-item').forEach((menuItem, idx) => {
-    // 2-chi li - "Закрепить"
-    if (idx === 1) {
-        menuItem.addEventListener('click', function() {
-            if (!selectedChat) return;
-            const chatId = selectedChat.dataset.chatId;
-            const state = chatStates.get(chatId) || {};
-            state.pin = !state.pin;
-            chatStates.set(chatId, state);
-            updateChatIcons(selectedChat);
+            // Margin
+            if (el.style.margin) {
+                el.style.margin = (parseFloat(el.style.margin) * 0.8) + (el.style.margin.replace(/[0-9.]/g, ''));
+            }
+            // Rasm va svg uchun ham width/height
+            if (el.tagName === 'IMG' || el.tagName === 'SVG') {
+                if (el.width) el.width = el.width * 0.8;
+                if (el.height) el.height = el.height * 0.8;
+                if (el.style.maxWidth) {
+                    el.style.maxWidth = (parseFloat(el.style.maxWidth) * 0.8) + (el.style.maxWidth.replace(/[0-9.]/g, ''));
+                }
+                if (el.style.maxHeight) {
+                    el.style.maxHeight = (parseFloat(el.style.maxHeight) * 0.8) + (el.style.maxHeight.replace(/[0-9.]/g, ''));
+                }
+            }
         });
     }
-    // 3-chi li - "Выключить уведомления"
-    if (idx === 2) {
-        menuItem.addEventListener('click', function() {
-            if (!selectedChat) return;
-            const chatId = selectedChat.dataset.chatId;
-            const state = chatStates.get(chatId) || {};
-            state.bell = !state.bell;
-            chatStates.set(chatId, state);
-            updateChatIcons(selectedChat);
+
+    // Sahifa yuklanganda yoki kerakli vaqtda chaqiring:
+    scaleRightsElements();
+
+    // ...existing code...
+
+
+    // ...existing code...
+    // ...existing code...
+
+    // Har bir chat uchun pin va bell holatini saqlash uchun massiv
+    const chatStates = new Map();
+
+    // Chat-item'ga o'ng tugma bosilganda selectedChat ni saqlash va id olish
+    document.querySelectorAll('.chat-item').forEach((item, idx) => {
+        item.dataset.chatId = idx; // har bir chatga id biriktiramiz
+        item.addEventListener('contextmenu', function(e) {
+            selectedChat = this;
         });
-    }
-});
-
-// ...existing code...
-
-// ...existing code...
-
-// "Меню по проекту" tugmasini faqat chat tanlanganda ko‘rsatish
-const projectMenuBtn = document.getElementById('showContextBtn');
-if (projectMenuBtn) projectMenuBtn.classList.add('hidden'); // Dastlab yashirin
-
-const chatItems = document.querySelectorAll('.chat-item');
-
-chatItems.forEach(item => {
-    item.addEventListener('click', function (e) {
-        e.stopPropagation();
-        chatItems.forEach(c => c.classList.remove('active-chat'));
-        this.classList.add('active-chat');
-        projectMenuBtn.classList.remove('hidden');
+        // Har bir chat yuklanganda holatini tiklash
+        updateChatIcons(item);
     });
-});
 
-document.addEventListener('click', function (e) {
-    const isChat = e.target.closest('.chat-item');
-    const isBtn = e.target.closest('#showContextBtn');
-    if (!isChat && !isBtn) {
-        projectMenuBtn.classList.add('hidden');
-        chatItems.forEach(c => c.classList.remove('active-chat'));
+    // Universal funksiya: chatga pin/bell ikonkasini qo'yish yoki olib tashlash
+    function updateChatIcons(chat) {
+        const messageInfo = chat.querySelector('.message-meta');
+        if (!messageInfo) return;
+        // Pin
+        let pinImg = messageInfo.querySelector('img[alt="pin"]');
+        if (pinImg) pinImg.remove();
+        if (chatStates.get(chat.dataset.chatId)?.pin) {
+            const newPin = document.createElement('img');
+            newPin.src = '/image/pin.svg';
+            newPin.alt = 'pin';
+            newPin.style.width = '18px';
+            // newPin.style.marginLeft = '6px';
+            messageInfo.appendChild(newPin);
+        }
+        // Bell
+        let bellImg = messageInfo.querySelector('img[alt="bell"]');
+        if (bellImg) bellImg.remove();
+        if (chatStates.get(chat.dataset.chatId)?.bell) {
+            const newBell = document.createElement('img');
+            newBell.src = '../image/bell.svg';
+            newBell.alt = 'bell';
+            newBell.style.width = '20px';
+            // newBell.style.marginLeft = '6px';
+            messageInfo.appendChild(newBell);
+        }
     }
-});
 
-if (projectMenuBtn) {
+    // ...existing code...
+
+// "Выключить уведомления" tugmasi bosilganda contextMenu ichidagi rasmni ham o‘zgartirish
+// const toggleNotificationsLi = document.getElementById('toggle-notifications');
+// if (toggleNotificationsLi) {
+//     toggleNotificationsLi.addEventListener('click', function () {
+//         const bellIcon = toggleNotificationsLi.querySelector('img');
+//         if (!bellIcon) return;
+//         // Toggle bell icon
+//         if (bellIcon.src.includes('bell2.svg')) {
+//             bellIcon.src = '../image/bell.svg';
+//         } else {
+//             bellIcon.src = '../image/bell2.svg';
+//         }
+//     });
+// }
+
+
+// ...existing code...
+
+    // "Закрепить" tugmasi bosilganda faqat tanlangan chat uchun emas, holatni massivda saqlaymiz
+    document.querySelectorAll('#contextMenu .menu-item').forEach((menuItem, idx) => {
+        // 2-chi li - "Закрепить"
+        if (idx === 1) {
+            menuItem.addEventListener('click', function() {
+                if (!selectedChat) return;
+                const chatId = selectedChat.dataset.chatId;
+                const state = chatStates.get(chatId) || {};
+                state.pin = !state.pin;
+                chatStates.set(chatId, state);
+                updateChatIcons(selectedChat);
+            });
+        }
+        // 3-chi li - "Выключить уведомления"
+        if (idx === 2) {
+            menuItem.addEventListener('click', function() {
+                if (!selectedChat) return;
+                const chatId = selectedChat.dataset.chatId;
+                const state = chatStates.get(chatId) || {};
+                state.bell = !state.bell;
+                chatStates.set(chatId, state);
+                updateChatIcons(selectedChat);
+            });
+        }
+    });
+
+    // ...existing code...
+
+    // ...existing code...
+
+    // "Меню по проекту" tugmasini faqat chat tanlanganda ko‘rsatish
+    const projectMenuBtn = document.getElementById('showContextBtn');
+    const btnImage = document.getElementById('btnImage');
+    let isProjectMenuActive = false;
+
+    if (projectMenuBtn) projectMenuBtn.classList.add('hidden'); // Dastlab yashirin
+
+    const chatItems = document.querySelectorAll('.chat-item');
+
+    chatItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.stopPropagation();
+            chatItems.forEach(c => c.classList.remove('active-chat'));
+            this.classList.add('active-chat');
+            projectMenuBtn.classList.remove('hidden');
+            // Tugma rasmni defaultga qaytarish
+            if (btnImage) btnImage.src = '/image/pointer.svg';
+            isProjectMenuActive = false;
+        });
+    });
+
     projectMenuBtn.addEventListener('click', function(e) {
         e.stopPropagation();
-    });
-}
-
-// ...existing code...
-
-const searchInput = document.getElementById('search-input');
-const clearSearchBtn = document.getElementById('clear-search');
-const left = document.getElementById('left');
-
-// Yashirish uchun left ichidagi barcha elementlarni tanlaymiz (search-container dan tashqari)
-let leftHideElements = [];
-if (left) {
-    leftHideElements = Array.from(left.children).filter(
-        el => el.id !== 'search-container'
-    );
-}
-
-// Inputga bosilganda left ichidagi boshqa elementlarni yashirish
-if (searchInput && clearSearchBtn) {
-    searchInput.addEventListener('focus', function () {
-        leftHideElements.forEach(el => el.style.display = 'none');
-        // X tugmasini ko‘rsatish (agar inputda qiymat bo‘lsa)
-        if (this.value.length > 0) {
-            clearSearchBtn.style.display = 'inline-flex';
-        }
-    });
-    // Inputga yozilganda X tugmasini ko‘rsatish/yashirish
-    searchInput.addEventListener('input', function () {
-        if (this.value.length > 0) {
-            clearSearchBtn.style.display = 'inline-flex';
+        if (!isProjectMenuActive) {
+            // Rasmni clearW.svg ga o‘zgartirish
+            if (btnImage) btnImage.src = '/image/clearW.svg';
+            isProjectMenuActive = true;
         } else {
-            clearSearchBtn.style.display = 'none';
+            // Rasmni avvalgi holatga qaytarish va tugmani yashirish
+            if (btnImage) btnImage.src = '/image/pointer.svg';
+            isProjectMenuActive = false;
+            projectMenuBtn.classList.add('hidden');
+            chatItems.forEach(c => c.classList.remove('active-chat'));
         }
     });
-    // Inputdan chiqilganda (blur) yana ko‘rsatish
-    searchInput.addEventListener('blur', function () {
-        setTimeout(() => { // X tugmasi bosilganda ham blur bo‘ladi, shuning uchun biroz kechiktiramiz
-            if (this.value.length === 0) {
-                leftHideElements.forEach(el => el.style.display = '');
+
+    // Chatdan va tugmadan tashqariga bosilganda tugmani yashirish va rasmni tiklash
+    document.addEventListener('click', function (e) {
+        const isChat = e.target.closest('.chat-item');
+        const isBtn = e.target.closest('#showContextBtn');
+        if (!isChat && !isBtn) {
+            projectMenuBtn.classList.add('hidden');
+            chatItems.forEach(c => c.classList.remove('active-chat'));
+            if (btnImage) btnImage.src = '/image/pointer.svg';
+            isProjectMenuActive = false;
+        }
+    });
+
+    // ...existing code...
+
+    const searchInput = document.getElementById('search-input');
+    const clearSearchBtn = document.getElementById('clear-search');
+    const left = document.getElementById('left');
+
+    // Yashirish uchun left ichidagi barcha elementlarni tanlaymiz (search-container dan tashqari)
+    let leftHideElements = [];
+    if (left) {
+        leftHideElements = Array.from(left.children).filter(
+            el => el.id !== 'search-container'
+        );
+    }
+
+    // Inputga bosilganda left ichidagi boshqa elementlarni yashirish
+    if (searchInput && clearSearchBtn) {
+        searchInput.addEventListener('focus', function () {
+            leftHideElements.forEach(el => el.style.display = 'none');
+            // X tugmasini ko‘rsatish (agar inputda qiymat bo‘lsa)
+            if (this.value.length > 0) {
+                clearSearchBtn.style.display = 'inline-flex';
+            }
+        });
+        // Inputga yozilganda X tugmasini ko‘rsatish/yashirish
+        searchInput.addEventListener('input', function () {
+            if (this.value.length > 0) {
+                clearSearchBtn.style.display = 'inline-flex';
+            } else {
                 clearSearchBtn.style.display = 'none';
             }
-        }, 150);
-    });
-    // X tugmasi bosilganda inputni tozalash va elementlarni ko‘rsatish
-    clearSearchBtn.addEventListener('click', function () {
-        searchInput.value = '';
-        clearSearchBtn.style.display = 'none';
-        leftHideElements.forEach(el => el.style.display = '');
-        searchInput.focus();
-    });
-}
+        });
+        // Inputdan chiqilganda (blur) yana ko‘rsatish
+        searchInput.addEventListener('blur', function () {
+            setTimeout(() => { // X tugmasi bosilganda ham blur bo‘ladi, shuning uchun biroz kechiktiramiz
+                if (this.value.length === 0) {
+                    leftHideElements.forEach(el => el.style.display = '');
+                    clearSearchBtn.style.display = 'none';
+                }
+            }, 150);
+        });
+        // X tugmasi bosilganda inputni tozalash va elementlarni ko‘rsatish
+        clearSearchBtn.addEventListener('click', function () {
+            searchInput.value = '';
+            clearSearchBtn.style.display = 'none';
+            leftHideElements.forEach(el => el.style.display = '');
+            searchInput.focus();
+        });
+    }
 
-// ...existing code...
+    // ...existing code...
 
 
     </script>
