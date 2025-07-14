@@ -478,13 +478,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img src="/image/person-img.png" alt="">
             </div>
             <div class="tips flex flex-col gap-[15px] transform scale-[0.93]">
-                <div class="tips-message cursor-pointer flex justify-end rounded-[30px] w-fit p-[10px_35px_10px_35px] bg-[#2B2E3A] text-white font-bold text-[18px] leading-[30px] text-align-right ml-auto">
+                <div class="tips-message mr-[-30px] cursor-pointer flex justify-end ml-auto rounded-[30px] w-fit p-[10px_35px_10px_35px] bg-[#2B2E3A] text-white font-bold text-[18px] leading-[30px] text-align-right">
                     Привет
                 </div>
-                <div class="tips-message cursor-pointer flex justify-end rounded-[30px] w-fit p-[10px_35px_10px_35px] bg-[#2B2E3A] text-white font-bold text-[18px] leading-[30px] text-align-right ml-auto">
+                <div class="tips-message mr-[-30px] cursor-pointer flex justify-end rounded-[30px] w-fit p-[10px_35px_10px_35px] bg-[#2B2E3A] text-white font-bold text-[18px] leading-[30px] text-align-right ml-auto">
                     Как дела?
                 </div>
-                <div class="tips-message cursor-pointer flex justify-end rounded-[30px] w-fit p-[10px_35px_10px_35px] bg-[#2B2E3A] text-white font-bold text-[18px] leading-[30px] text-align-right ml-auto">
+                <div class="tips-message mr-[-30px] cursor-pointer flex justify-end rounded-[30px] w-fit p-[10px_35px_10px_35px] bg-[#2B2E3A] text-white font-bold text-[18px] leading-[30px] text-align-right ml-auto">
                     Что делаешь?
                 </div>
             </div>

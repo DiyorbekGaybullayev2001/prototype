@@ -23,6 +23,18 @@
         #quest-info-modal{
             background: #000000d7;
         }
+        .text_input{
+            font-size: 20px;
+        }
+        .xdiv{
+            position: relative !important;
+        }
+        .xbtn{
+            position: absolute !important;
+            right: 20px !important;
+            top: 10px !important;
+            font-size: 30px;
+        }
         
     </style>
 </head>
@@ -40,8 +52,14 @@
                     <img src="/image/avatar.png" alt="" class="max-w-[60px]">
                 </a>
             </div>
-            <input class="w-[60%] py-[12px] px-[20px] h-[60px] shadow-blue-950 bg-white-important text-[20px] leading-[28px] font-bold text-black-important focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent max-w-[600px] max-h-[70px] max-[1100px]:w-full max-[1100px]:h-[50px] max-[1100px]:p-[15px] max-[1100px]:text-[16px] max-[1100px]:leading-[24px] max-[1100px]:font-normal max-[1100px]: rounded-[40px] border-none max-[1100px]:hidden" placeholder="Поиск"
-                type="text">
+            <div class="xdiv w-[60%]">
+                <input id="searchInput"
+                    class="text_input w-full py-[12px] px-[20px] h-[60px] shadow-blue-950 bg-white-important leading-[28px] font-bold text-black-important focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent max-w-[600px] max-h-[70px] max-[1100px]:w-full max-[1100px]:h-[50px] max-[1100px]:p-[15px] max-[1100px]:text-[16px] max-[1100px]:leading-[24px] max-[1100px]:font-normal max-[1100px]: rounded-[40px] border-none max-[1100px]:hidden"
+                    placeholder="Поиск" type="text">
+                <button id="clearSearchBtn"
+                    class="xbtn text-gray-400 hover:text-black text-2xl font-bold hidden"
+                    type="button" aria-label="Очистить">&times;</button>
+            </div>
 
             <div class="flex items-center gap-[25px]">
                 <a href="#"
@@ -141,6 +159,39 @@
         document.getElementById('quest-info-modal').onclick = function(e) {
             if (e.target === this) this.classList.add('hidden');
         };
+
+
+        // ...existing code...
+
+const searchInput = document.getElementById('searchInput');
+const clearSearchBtn = document.getElementById('clearSearchBtn');
+
+if (searchInput && clearSearchBtn) {
+    searchInput.addEventListener('input', function () {
+        if (this.value.length > 0) {
+            clearSearchBtn.classList.remove('hidden');
+        } else {
+            clearSearchBtn.classList.add('hidden');
+        }
+    });
+    searchInput.addEventListener('focus', function () {
+        if (this.value.length > 0) {
+            clearSearchBtn.classList.remove('hidden');
+        }
+    });
+    searchInput.addEventListener('blur', function () {
+        setTimeout(() => {
+            clearSearchBtn.classList.add('hidden');
+        }, 150);
+    });
+    clearSearchBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        clearSearchBtn.classList.add('hidden');
+        searchInput.focus();
+    });
+}
+
+// ...existing code...
     </script>
 </body>
 
