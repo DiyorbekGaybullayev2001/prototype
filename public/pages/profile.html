@@ -35,7 +35,7 @@
             font-size: 14px !important;
         }
         #deleteAccountModal, #logoutModal{
-            background: #000000ea !important;
+            background: #000000d5 !important;
         }
         .closeLogModal{
             position: relative !important;
@@ -51,7 +51,9 @@
     cursor: pointer !important; 
     z-index: 10 !important;
 }
-        
+     #profileName{
+        font-size: 25px !important;
+     }   
     </style>
 </head>
 
@@ -102,9 +104,12 @@
                             class="absolute mr-[10px] inset-0 opacity-0 cursor-pointer">
                         <img id="profileImage" src="/image/avatar.png" alt="" class="min-w-[70px] h-[70px] rounded-full">
                     </div>
-                    <input id="profileName" type="text"
-                        class="font-bold text-[25px] w-full relative leading-[34.1px] tracking-normal text-[#454545] border-none bg-transparent py-[10px] px-[20px] max-[600px]:text-[18px]"
-                        value="Иванов Иван Иванович" disabled>
+                    <div class="relative w-[400px]">
+        <input id="profileName" type="text"
+            class="!font-bold w-full  leading-[34.1px] tracking-normal text-[#454545] border-none bg-transparent py-[10px] px-[20px] max-[600px]:text-[20px]"
+            value="Иванов Иван Иванович" disabled>
+        <img id="profileNameEditIcon" src="/image/pen.svg" alt="edit" class="edit-icon hidden absolute top-3 right-3 cursor-pointer">
+    </div>
                 </div>
 
                 <div id="info"
@@ -130,7 +135,7 @@
         <img src="/image/pen.svg" alt="edit" class="edit-icon hidden absolute top-3 right-3">
     </div>
     <div class="info-item relative">
-        <span class="info-label block text-[#888] mb-1 font-bold" >В Тг:</span>
+        <span class="info-label block text-[#888] mb-1 font-bold" >Телеграм:</span>
         <h2 class="flex items-center gap-[46px] font-semibold text-[16px] leading-[30px] tracking-[1px] text-black py-[10px] px-[20px]">
             <span class="flex w-[17px] h-[17px] bg-[#595959] rounded-full"></span>
             <span class="info-text">@nickname</span>
@@ -316,26 +321,42 @@
         });
     });
 
+    // Edit rejimi bosilganda profileName uchun qalamcha ko‘rsatish
+    document.querySelectorAll('#editProfileButton').forEach(btn => {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('.info-label').forEach(label => {
+                label.style.display = 'none';
+            });
+            document.body.classList.add('editing-profile');
+            // Qalamchani ko‘rsatish
+            const pnEditIcon = document.getElementById('profileNameEditIcon');
+            if (pnEditIcon) pnEditIcon.classList.remove('hidden');
+        });
+    });
+
     // Tahrirlashdan chiqishda label'larni qayta ko'rsatish
     function showLabelsAgain() {
         document.querySelectorAll('.info-label').forEach(label => {
             label.style.display = '';
         });
         document.body.classList.remove('editing-profile');
+        // Qalamchani yashirish
+        const pnEditIcon = document.getElementById('profileNameEditIcon');
+        if (pnEditIcon) pnEditIcon.classList.add('hidden');
     }
 
-    // Misol uchun, tahrirlashdan chiqish tugmasi yoki saqlashdan keyin chaqiring:
-    // Agar sizda "Сохранить" yoki "Отмена" tugmasi bo'lsa, ularga quyidagicha qo'shing:
-    // 
+    // Qalamchaga bosilganda inputni aktiv qilish
+    const profileNameInput = document.getElementById('profileName');
+    const profileNameEditIcon = document.getElementById('profileNameEditIcon');
+    if (profileNameEditIcon && profileNameInput) {
+        profileNameEditIcon.addEventListener('click', function (e) {
+            e.stopPropagation();
+            profileNameInput.disabled = false;
+            profileNameInput.focus();
+        });
+    }
 
-    // Agar inputdan tashqariga bosilganda yoki boshqa joyda yakunlansa:
-    // document.addEventListener('click', function(e) {
-    //     if (document.body.classList.contains('editing-profile') && !e.target.closest('.info-item')) {
-    //         showLabelsAgain();
-    //     }
-    // });
-
-// Har bir .edit-icon (karandash) va info-text uchun bir xil tahrirlash logikasi
+    // Har bir .edit-icon (karandash) va info-text uchun bir xil tahrirlash logikasi
 document.querySelectorAll('.info-item').forEach((item, idx) => {
     const editIcon = item.querySelector('.edit-icon');
     const infoText = item.querySelector('.info-text');
@@ -363,6 +384,50 @@ document.querySelectorAll('.info-item').forEach((item, idx) => {
         });
     }
 });
+
+document.querySelectorAll('#editProfileButton').forEach(btn => {
+    btn.addEventListener('click', function () {
+        document.querySelectorAll('.info-label').forEach(label => {
+            label.style.display = 'none';
+        });
+        document.body.classList.add('editing-profile');
+        // Qalamchani ko‘rsatish
+        const pnEditIcon = document.getElementById('profileNameEditIcon');
+        if (pnEditIcon) pnEditIcon.classList.remove('hidden');
+        // Borderni ko‘rsatish
+        const pnInput = document.getElementById('profileName');
+        if (pnInput) {
+            pnInput.style.border = '1px solid #e2e2e2';
+            pnInput.style.borderRadius = '12px';
+            pnInput.style.background = '#fff';
+        }
+    });
+});
+
+// Tahrirlashdan chiqishda borderni yashirish
+function showLabelsAgain() {
+    document.querySelectorAll('.info-label').forEach(label => {
+        label.style.display = '';
+    });
+    document.body.classList.remove('editing-profile');
+    // Qalamchani yashirish
+    const pnEditIcon = document.getElementById('profileNameEditIcon');
+    if (pnEditIcon) pnEditIcon.classList.add('hidden');
+    // Borderni yashirish va inputni disable qilish
+    const pnInput = document.getElementById('profileName');
+    if (pnInput) {
+        pnInput.style.border = 'none';
+        pnInput.style.background = 'transparent';
+        pnInput.disabled = true;
+    }
+}
+showLabelsAgain()
+
+document.getElementById('profileName').addEventListener('blur', function() {
+    showLabelsAgain();
+});
+
+
 
 </script>
 
