@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 cardElements.forEach((card, index) => {
                     card.classList.add('card-full');
                     card.style.backgroundImage = `url(../../image/project-${index + 1}-full.png)`;
-                    card.style.height = "300px"
+                    card.style.height = "330px"
                     const paragraphs = card.querySelectorAll('p');
                     if (paragraphs.length > 2) {
                         paragraphs[2].classList.add('hidden');
@@ -64,8 +64,43 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     }
                 });
                 showAllProjectsButton.textContent = 'Проекты в работе';
-                h3Project.textContent = 'Все проекты в работе';
-            }
+                // ...existing code...
+h3Project.innerHTML = `
+    <div class="flex items-center justify-between gap-2">
+                <span>Все проекты в работе</span>
+    <span style="position:relative; display:inline-block; margin-left:16px;">
+        <input
+            type="text"
+            id="searchProject"
+            placeholder="Поиск"
+            style="font-size:21px; height:56.5px; padding: 14px; border-radius:40px; border:none; box-shadow:0 1px 4px #eee; background:#fff; color:#000; width:400px;"
+        >
+        <button
+            id="clearSearchBtn"
+            type="button"
+            aria-label="Очистить"
+            style="display:none; position:absolute; right:8px; top:35%; background:transparent; border:none; font-size:25px; color:#000; cursor:pointer; line-height:1;"
+        >&times;</button>
+    </span>
+    </div>
+`;
+
+// "x" tugmasi funksiyasi
+const searchInput = document.getElementById('searchProject');
+const clearBtn = document.getElementById('clearSearchBtn');
+if (searchInput && clearBtn) {
+    searchInput.addEventListener('input', function () {
+        clearBtn.style.display = this.value.length ? 'block' : 'none';
+    });
+    clearBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        searchInput.focus();
+        // Agar filtering ishlatilsa, shu yerda kartalarni qayta ko‘rsatish mumkin
+    });
+}
+// ...existing code...
+           }
         });
     }
 
@@ -93,7 +128,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 cardElements.forEach((card, index) => {
                     card.classList.add('card-full');
                     card.style.backgroundImage = `url(../../image/project-${index + 1}-full.png)`;
-                    card.style.height = "300px"
+                    card.style.height = "330px"
                     const paragraphs = card.querySelectorAll('p');
                     if (paragraphs.length > 2) {
                         paragraphs[2].classList.add('hidden');
@@ -101,7 +136,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     }
                 });
                 showAllEndedProjectsButton.textContent = 'Завершенные проекты';
-                h3EndedProject.textContent = 'Все завершенные работы';
+                h3EndedProject.innerHTML = `
+    <div class="flex items-center justify-between gap-2">
+                <span>Все завершенные работы</span>
+    <span style="position:relative; display:inline-block; margin-left:16px;">
+        <input
+            type="text"
+            id="searchProject"
+            placeholder="Поиск"
+            style="font-size:21px; height:56.5px; padding: 14px; border-radius:40px; border:none; box-shadow:0 1px 4px #eee; background:#fff; color:#000; width:400px;"
+        >
+        <button
+            id="clearSearchBtn"
+            type="button"
+            aria-label="Очистить"
+            style="display:none; position:absolute; right:8px; top:35%; background:transparent; border:none; font-size:25px; color:#000; cursor:pointer; line-height:1;"
+        >&times;</button>
+    </span>
+    </div>`
+
+    // "x" tugmasi funksiyasi
+const searchInput = document.getElementById('searchProject');
+const clearBtn = document.getElementById('clearSearchBtn');
+if (searchInput && clearBtn) {
+    searchInput.addEventListener('input', function () {
+        clearBtn.style.display = this.value.length ? 'block' : 'none';
+    });
+    clearBtn.addEventListener('click', function () {
+        searchInput.value = '';
+        clearBtn.style.display = 'none';
+        searchInput.focus();
+        // Agar filtering ishlatilsa, shu yerda kartalarni qayta ko‘rsatish mumkin
+    });
+}
             }
         });
     }
